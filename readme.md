@@ -15,11 +15,11 @@
 | 02-27         | Documentation d'un Bug    | Livrable #1 |
 | 03-06         | Relâche    |  |
 | 03-13         |     |  |
-| 03-20         |  menu ui/ux/combat base  | livrabe #2 | 
+| 03-20         |  menu ui/ux/combat base  | livrable #2 | 
 | 03-27         |     | |
 | 04-03         | Congé de Pâques    |  |
 | 04-10         |     | |
-| 04-17         | combat indepth    |livrabe #3 |
+| 04-17         | combat indepth    |livrable #3 |
 | 04-24         |     | |
 | 05-01         | Présentation des projets en classe (Épreuve terminale)    | Livrable #4 |
 | 05-06         | Symposium    |  |
