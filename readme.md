@@ -3,7 +3,7 @@
 
 <h2 align="center">[SpellStack]</h2>
 
-- SpellStacking, un jeu tactique tour par tour de magie
+- SpellStack, un jeu tactique tour par tour de magie
 
 - Pour avoir acces a ce jeux, aucun outil est nécessaire, seul un ordinateur (minimum rasberry pie)
 
