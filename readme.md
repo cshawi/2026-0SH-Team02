@@ -5,9 +5,11 @@
 
 ### Description du produit final
 
-- SpellStack, un jeu tactique tour par tour de magie
+- SpellStack, Utilisez la magie pour vaincre les forces du mal.
 
 - Pour avoir acces a ce jeux, aucun outil est nécessaire, seul un ordinateur (minimum rasberry pie)
+
+- Decouvrir tous les sorts afin de remplir votre grimoire.
 
 - Combiner les sorts pour créer le sort ultime!
 
