@@ -9,6 +9,7 @@
 
 - Pour avoir acces a ce jeux, aucun outil est nécessaire, seul un ordinateur (minimum rasberry pie)
 
+- Combiner les sorts pour créer le sort ultime!
 
 
 
