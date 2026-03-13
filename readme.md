@@ -4,7 +4,6 @@
 <h1 align="center">SpellStack</h1>
 
 ### Description du produit final
-Écrivez ici une courte description de 2 ou 3 phrases de votre projet.
 
 - SpellStack, un jeu tactique tour par tour de magie
 
