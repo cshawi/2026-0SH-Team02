@@ -18,13 +18,14 @@ z_index = -1
 visible = false
 
 [node name="MainMenu" parent="UI" unique_id=221051864 instance=ExtResource("2_8gbba")]
+visible = false
 
 [node name="LevelHolder" type="Node2D" parent="." unique_id=1645931298]
 z_index = 1
 
 [node name="Player" parent="LevelHolder" unique_id=522176388 instance=ExtResource("3_kry3j")]
 z_index = 1
-position = Vector2(308, 861)
+position = Vector2(210, 827)
 player_stats = ExtResource("4_21xkr")
 
 [node name="Managers" type="Node" parent="." unique_id=580458911]
