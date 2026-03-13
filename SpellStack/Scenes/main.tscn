@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dscac1uvwn47g"]
+
+[ext_resource type="PackedScene" uid="uid://bmi3okhlq8rsd" path="res://Scenes/hud.tscn" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://bcjpgi0nra7bh" path="res://Scenes/main_menu.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://d3yn6b6axh4kb" path="res://Scenes/game_manager.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://basd3ouwrxfvs" path="res://Scenes/player.tscn" id="3_kry3j"]
+[ext_resource type="Resource" uid="uid://etlpkvhb22v6" path="res://Resources/player_stats.tres" id="4_21xkr"]
+[ext_resource type="PackedScene" uid="uid://do0ag68tn1kbd" path="res://Scenes/scene_manager.tscn" id="6_344ge"]
+[ext_resource type="Script" uid="uid://bv8ksj32dbywc" path="res://Script/Managers/scene_manager.gd" id="7_ynf5e"]
+[ext_resource type="PackedScene" uid="uid://ce3y8pf07s6am" path="res://Scenes/sound_manager.tscn" id="8_hptm8"]
+
+[node name="Main" type="Node2D" unique_id=179179789]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1288321107]
+
+[node name="Hud" parent="UI" unique_id=704493129 instance=ExtResource("1_bo1nx")]
+visible = false
+
+[node name="MainMenu" parent="UI" unique_id=221051864 instance=ExtResource("2_8gbba")]
+
+[node name="LevelHolder" type="Node2D" parent="." unique_id=1645931298]
+
+[node name="Player" parent="LevelHolder" unique_id=522176388 instance=ExtResource("3_kry3j")]
+player_stats = ExtResource("4_21xkr")
+
+[node name="Managers" type="Node" parent="." unique_id=580458911]
+
+[node name="GameManager" parent="Managers" unique_id=441967301 node_paths=PackedStringArray("player_character") instance=ExtResource("3_8gbba")]
+player_character = NodePath("../../LevelHolder/Player")
+
+[node name="SceneManager" parent="Managers" unique_id=653860817 instance=ExtResource("6_344ge")]
+script = ExtResource("7_ynf5e")
+
+[node name="SoundManager" parent="Managers" unique_id=1437602414 instance=ExtResource("8_hptm8")]

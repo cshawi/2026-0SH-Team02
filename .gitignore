@@ -1,0 +1,18 @@
+# Godot
+.import/
+.godot/
+.export/
+.export_presets.cfg
+
+# Mono (si jamais)
+.mono/
+mono_crash.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backups
+*~
+*.tmp
+*.bak
