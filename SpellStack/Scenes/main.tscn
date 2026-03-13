@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ce3y8pf07s6am" path="res://Scenes/sound_manager.tscn" id="8_hptm8"]
 
 [node name="Main" type="Node2D" unique_id=179179789]
+z_index = -1
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1288321107]
 
@@ -19,8 +20,11 @@ visible = false
 [node name="MainMenu" parent="UI" unique_id=221051864 instance=ExtResource("2_8gbba")]
 
 [node name="LevelHolder" type="Node2D" parent="." unique_id=1645931298]
+z_index = 1
 
 [node name="Player" parent="LevelHolder" unique_id=522176388 instance=ExtResource("3_kry3j")]
+z_index = 1
+position = Vector2(308, 861)
 player_stats = ExtResource("4_21xkr")
 
 [node name="Managers" type="Node" parent="." unique_id=580458911]

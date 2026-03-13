@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://dv0jdi3bsvcmx" path="res://assets/Fonts/DurendalAndOliphantRegular-LVwL4.ttf" id="1_28flt"]
 
 [node name="MainMenu" type="Control" unique_id=221051864]
+z_index = -1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
