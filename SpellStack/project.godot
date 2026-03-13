@@ -11,4 +11,5 @@ config_version=5
 [application]
 
 config/name="SpellStack"
+run/main_scene="uid://dscac1uvwn47g"
 config/features=PackedStringArray("4.6")
