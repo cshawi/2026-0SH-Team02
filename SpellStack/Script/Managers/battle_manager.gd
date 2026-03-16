@@ -61,8 +61,7 @@ func start_encounter():
 	character_list.append_array(enemies_character)
 	encounter_state = Encounter.IN_ENCOUNTER
 	start_round()
-	
-	
+
 func enter_encounter(): # fait juste summon pour l'instant
 	
 	character_list.append(player_character)
@@ -91,7 +90,11 @@ func pv_verif():
 		character_list.erase(entity)
 		turn_order.erase(entity)
 	
-func end_turn():
+func end_turn(actor):
+	if actor != current_character:
+		print("Ignoring turn end from", actor.name)
+		return
+	
 	pv_verif()  # Remove characters with 0 HP
 	print("Character status end turn")
 	for entity in character_list:
@@ -123,8 +126,8 @@ func start_round():
 		print("All characters are down. Game Over!")
 		game_over = true
 		return
-
-	connectionVerif()  # Ensure each character has signals connected
+	
+	connectionVerif()# Ensure each character has signals connected
 	start_turn()
 
 func start_turn():
@@ -135,6 +138,6 @@ func start_turn():
 		return
 
 	current_character = turn_order.pop_front()
-	print(current_character.name, "is now acting.")
+	print(current_character.name, " is now acting.")
 	current_character.start_turn()
 	

@@ -73,7 +73,7 @@ mouse_filter = 2
 [node name="Player" parent="LevelHolder" unique_id=522176388 node_paths=PackedStringArray("target_manager") instance=ExtResource("3_kry3j")]
 stats = SubResource("Resource_gt3je")
 target_manager = NodePath("../../Managers/TargetManager")
-actions = Array[Resource]([SubResource("Resource_pdsj5"), SubResource("Resource_ee4r6")])
+actions = Array[ExtResource("9_fevyy")]([SubResource("Resource_pdsj5"), SubResource("Resource_ee4r6")])
 
 [node name="Enemy" parent="LevelHolder" unique_id=1434497884 node_paths=PackedStringArray("target_manager") instance=ExtResource("5_ynf5e")]
 position = Vector2(22, -88)
