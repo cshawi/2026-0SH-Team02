@@ -1,11 +1,18 @@
 [gd_scene format=3 uid="uid://basd3ouwrxfvs"]
 
 [ext_resource type="Script" uid="uid://dt3xta7rlgu2q" path="res://Script/Characters/Player/player.gd" id="1_v0iea"]
+[ext_resource type="Script" uid="uid://biuygucgswgph" path="res://Script/Characters/Player/player_stats.gd" id="2_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://dsi8vi6ovypai" path="res://assets/Sprites/sprite.png" id="3_6t5aa"]
 
-[sub_resource type="ImageTexture" id="ImageTexture_f60y1"]
+[sub_resource type="Resource" id="Resource_6t5aa"]
+script = ExtResource("2_cvnsp")
+metadata/_custom_type_script = "uid://biuygucgswgph"
 
 [node name="Player" type="Node2D" unique_id=522176388]
 script = ExtResource("1_v0iea")
+player_stats = SubResource("Resource_6t5aa")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1965700821]
-texture = SubResource("ImageTexture_f60y1")
+position = Vector2(251, 191.50003)
+scale = Vector2(0.04599524, 0.050212212)
+texture = ExtResource("3_6t5aa")
