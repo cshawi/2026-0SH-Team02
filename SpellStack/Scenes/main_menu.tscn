@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bcjpgi0nra7bh"]
 
+[ext_resource type="Script" uid="uid://blgi7f58g834x" path="res://Script/Menus/main_menu.gd" id="1_1ehe0"]
 [ext_resource type="FontFile" uid="uid://dv0jdi3bsvcmx" path="res://assets/Fonts/DurendalAndOliphantRegular-LVwL4.ttf" id="1_28flt"]
 
 [node name="MainMenu" type="Control" unique_id=221051864]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1ehe0")
 
 [node name="BG" type="ColorRect" parent="." unique_id=1303745415]
 layout_mode = 1
@@ -98,3 +100,6 @@ theme_override_constants/margin_bottom = 20
 [node name="Createurs" type="Label" parent="CreateurContainer" unique_id=752124339]
 layout_mode = 2
 text = "Par Dragiole, Cuzimapanda, Alexlegamer427 et Bing_Quiche"
+
+[connection signal="pressed" from="MenuMargins/MenuContainer/PlayBtn" to="." method="_on_play_btn_pressed"]
+[connection signal="pressed" from="MenuMargins/MenuContainer/QuitBtn" to="." method="_on_quit_btn_pressed"]
