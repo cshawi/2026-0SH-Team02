@@ -365,24 +365,24 @@ animations = [{
 
 [node name="Skeleton_Idle" type="AnimatedSprite2D" parent="." unique_id=1694003760]
 sprite_frames = SubResource("SpriteFrames_ap85e")
-frame_progress = 0.38309634
+frame_progress = 0.04899122
 
 [node name="Skeleton_Hurt" type="AnimatedSprite2D" parent="." unique_id=38656160]
 visible = false
 sprite_frames = SubResource("SpriteFrames_1dxyt")
-frame_progress = 0.8068614
+frame_progress = 0.7049767
 
 [node name="Skeleton_Die" type="AnimatedSprite2D" parent="." unique_id=229412754]
 visible = false
 sprite_frames = SubResource("SpriteFrames_qfail")
-frame_progress = 0.4050336
+frame_progress = 0.99759525
 
 [node name="Skeleton_Attack" type="AnimatedSprite2D" parent="." unique_id=156030475]
 visible = false
 sprite_frames = SubResource("SpriteFrames_4nam5")
-frame_progress = 0.8856399
+frame_progress = 0.731169
 
 [node name="Skeleton_Attack2" type="AnimatedSprite2D" parent="." unique_id=1296110395]
 visible = false
 sprite_frames = SubResource("SpriteFrames_7tq5p")
-frame_progress = 0.96591765
+frame_progress = 0.20380749
