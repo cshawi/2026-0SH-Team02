@@ -14,6 +14,8 @@ var game_over : bool = false
 #fait le tour des etats dun encounter
 enum Encounter { NONE, START, IN_ENCOUNTER ,END   } 
 
+func start_game():
+	pass
 
 func _ready() -> void:
 	if player_character != null:
