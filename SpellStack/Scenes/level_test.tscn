@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene format=3 uid="uid://cqy3uqwdsnn7k"]
+=======
+[gd_scene format=3 uid="uid://dd3i6ak0y6dyw"]
+>>>>>>> base_combat
 
 [node name="LevelTest" type="Node2D" unique_id=1652021035]
 

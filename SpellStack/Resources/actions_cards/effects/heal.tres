@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="Heal" format=3 uid="uid://c6p5p3g6s55oj"]
+
+[ext_resource type="Script" uid="uid://3t676henkg37" path="res://Script/Actions/heal.gd" id="1_cv4h1"]
+
+[resource]
+script = ExtResource("1_cv4h1")
