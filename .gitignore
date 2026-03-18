@@ -1,12 +1,10 @@
-# Godot
-.import/
-.godot/
-.export/
-.export_presets.cfg
+# Godot (partout dans le projet)
+**/.import/
+**/.godot/
+**/.export/
+**/.mono/
 
-# Mono (si jamais)
-.mono/
-mono_crash.*
+.export_presets.cfg
 
 # OS
 .DS_Store
