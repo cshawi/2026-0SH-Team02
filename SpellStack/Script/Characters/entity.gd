@@ -4,7 +4,7 @@ extends Node2D
 @export var actions : Array[Action]
 
 signal turn_finished(actor)# signal pour le game_manager et gestion du tour
-enum Turn_state { ACTING , WAITING,DEAD }
+enum Turn_state { ACTING , WAITING,DEAD,NONE }
 
 var turn_state = Turn_state.WAITING
 

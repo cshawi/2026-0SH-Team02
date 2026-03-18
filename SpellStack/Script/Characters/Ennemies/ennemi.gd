@@ -15,18 +15,9 @@ func _ready() -> void:
 	click_area.clicked.connect(_on_clicked)
 
 func start_turn():
-	
-	turn_state = Turn_state.ACTING
-	choose_action()
-
-#func choose_action():
-	#
-	#print(self , "essai de faire une action")
-	#if(turn_state == Turn_state.ACTING):
-		#var action = actions.pick_random()
-		#var target = ai_choose_target()
-		#print(target ," va etre attaquer avec : " , action.name )
-		#perform_action(action, target)
+	if(turn_state ==Turn_state.WAITING):
+		turn_state = Turn_state.ACTING
+		choose_action()
 
 func choose_action():
 	print(self, "Trying to choose an action...")

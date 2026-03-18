@@ -5,6 +5,10 @@ class_name Battle_manager
 @export var player_character : Player
 @export var enemies_character : Array[Ennemi] # voir la mecanique de packed scene pour prendre les ennemies selont genre le lvl de l'encounter pour prochain livrable
 
+@onready var game_over_ui = get_node_or_null("../../UI/GameOver")# a deplacer dans game manager dans 3e livrable 
+@onready var win_ui = get_node_or_null("../../UI/WinUi")
+
+
 var current_character : Entity # a changer pour plus tard Celui qui a le tour
 
 var character_list : Array [Entity] =[]
@@ -35,7 +39,7 @@ func _process(delta: float) -> void:
 			
 		Encounter.START:
 			#print("START");
-			start_encounter();
+			enter_encounter();
 			
 		Encounter.IN_ENCOUNTER:
 			# print("IN_ENCOUNTER");
@@ -80,22 +84,43 @@ func end_encounter():
 	print("Encounter Ended")
 	
 	
-func pv_verif():
+# check les pv
+func pv_verif(): 
 	var to_remove = []
 	for entity in character_list:
 		if entity.stats.current_hp <= 0:
 			to_remove.append(entity)
 		
 	for entity in to_remove:
+		entity.turn_state = entity.Turn_state.DEAD
 		character_list.erase(entity)
 		turn_order.erase(entity)
-	
+		entity.queue_free()
+		
+	if(!character_list.has(player_character)):
+		encounter_state = Encounter.END
+		game_over =true;
+		print("Le player est mort!")
+		get_tree().paused = true
+		game_over_ui.visible = true
+		character_list.clear()
+		turn_order.clear()
+	elif(character_list.has(player_character) && character_list.size() == 1):
+		encounter_state = Encounter.END
+		print("Les ennemies sont morts")
+		get_tree().paused = true
+		win_ui.visible = true
+		character_list.clear()
+		turn_order.clear()
+		
+		
 func end_turn(actor):
 	if actor != current_character:
 		print("Ignoring turn end from", actor.name)
 		return
-	
 	pv_verif()  # Remove characters with 0 HP
+	
+	
 	print("Character status end turn")
 	for entity in character_list:
 		print("Character HP states:", entity.stats.current_hp )
