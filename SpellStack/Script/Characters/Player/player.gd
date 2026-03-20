@@ -38,6 +38,7 @@ func _on_target_selected(enemy):
 		perform_action(selected_action, enemy)
 		selected_action = null
 		
+		
 func start_turn():
 	super.start_turn()
 	selected_action = null
