@@ -3,11 +3,11 @@ extends Node
 class_name Battle_manager
 
 @export var player_character : Player
-var enemies_character : Array[Ennemi] # voir la mecanique de packed scene pour prendre les ennemies selont genre le lvl de l'encounter pour prochain livrable
+@export var enemies_character : Array[Ennemi] # voir la mecanique de packed scene pour prendre les ennemies selont genre le lvl de l'encounter pour prochain livrable
 
 @onready var game_over_ui = get_node_or_null("../../UI/GameOver")# a deplacer dans game manager dans 3e livrable 
 @onready var win_ui = get_node_or_null("../../UI/WinUi")
-@onready var level_holder = $"../../LevelHolder"
+
 
 var current_character : Entity # a changer pour plus tard Celui qui a le tour
 
@@ -23,11 +23,6 @@ enum Encounter { NONE, START, IN_ENCOUNTER ,END   }
 var encounter_state : Encounter = Encounter.NONE
 
 func _ready() -> void:
-	var level : Level = level_holder.get_child(0)
-	for child in level.get_children():
-		enemies_character.append(child)
-
-	
 	if player_character == null:
 		print("error player not found");
 	else:
@@ -94,7 +89,6 @@ func pv_verif():
 	var to_remove = []
 	for entity in character_list:
 		if entity.stats.current_hp <= 0:
-			print(entity)
 			to_remove.append(entity)
 		
 	for entity in to_remove:

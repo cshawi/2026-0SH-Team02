@@ -11,16 +11,14 @@ size = Vector2(523.8442, 1073.252)
 scale = Vector2(0.99404126, 1.0176158)
 script = ExtResource("1_wovta")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=255464350]
-position = Vector2(28.167725, 70.75357)
-scale = Vector2(0.095651045, 0.10988518)
-texture = ExtResource("1_m1htj")
+[node name="ShroomEnemy" parent="." unique_id=1864827885 instance=ExtResource("2_xeo28")]
+position = Vector2(913.44293, 296.77213)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1287060572]
 script = ExtResource("3_xeo28")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1960621844]
-position = Vector2(30.17987, 76.64972)
+position = Vector2(913.443, 295.78943)
 rotation = -3.1415925
 scale = Vector2(0.11865346, -0.14309074)
 shape = SubResource("RectangleShape2D_wovta")
