@@ -290,6 +290,8 @@ animations = [{
 [node name="ShroomEnemy" type="Node2D" unique_id=1864827885]
 
 [node name="shroom" type="AnimatedSprite2D" parent="." unique_id=332395559]
+position = Vector2(-0.9999999, 1)
+scale = Vector2(1.7375001, 1.5703125)
 sprite_frames = SubResource("SpriteFrames_0ne8a")
 animation = &"idle"
 autoplay = "idle"

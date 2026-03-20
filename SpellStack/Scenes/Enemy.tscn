@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://t1euthvr0ft5"]
 
-[ext_resource type="Texture2D" uid="uid://dsi8vi6ovypai" path="res://assets/Sprites/sprite.png" id="1_m1htj"]
 [ext_resource type="Script" uid="uid://ky70o5kgwamk" path="res://Script/Characters/Ennemies/ennemi.gd" id="1_wovta"]
+[ext_resource type="PackedScene" uid="uid://dgxfk8cyb6vsb" path="res://Scenes/Ennemy/Shroom_enemy.tscn" id="2_xeo28"]
 [ext_resource type="Script" uid="uid://mafskuykreei" path="res://Script/clickeable_area.gd" id="3_xeo28"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wovta"]
@@ -11,16 +11,14 @@ size = Vector2(523.8442, 1073.252)
 scale = Vector2(0.99404126, 1.0176158)
 script = ExtResource("1_wovta")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=255464350]
-position = Vector2(836.88403, 297.8112)
-scale = Vector2(0.095651045, 0.10988518)
-texture = ExtResource("1_m1htj")
+[node name="ShroomEnemy" parent="." unique_id=1864827885 instance=ExtResource("2_xeo28")]
+position = Vector2(913.44293, 296.77213)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1287060572]
 script = ExtResource("3_xeo28")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1960621844]
-position = Vector2(835.8731, 296.9086)
+position = Vector2(913.443, 295.78943)
 rotation = -3.1415925
 scale = Vector2(0.11865346, -0.14309074)
 shape = SubResource("RectangleShape2D_wovta")
