@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Action" format=3 uid="uid://cixtxot8kvyab"]
+
+[ext_resource type="Script" uid="uid://d0e1la37k4yro" path="res://Script/Actions/Effects/effect.gd" id="1_blmht"]
+[ext_resource type="Script" uid="uid://bf4hgb2868r4s" path="res://Script/Actions/action.gd" id="2_7xu2r"]
+[ext_resource type="Resource" uid="uid://b4ukfqskxnemf" path="res://Resources/actions_cards/effects/damage.tres" id="2_sdwlh"]
+
+
+[resource]
+script = ExtResource("2_7xu2r")
+name = "simpleSpell"
+effects = Array[ExtResource("1_blmht")]([ExtResource("2_sdwlh")])
+metadata/_custom_type_script = "uid://bf4hgb2868r4s"
