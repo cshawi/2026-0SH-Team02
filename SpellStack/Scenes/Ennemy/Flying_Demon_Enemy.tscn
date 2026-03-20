@@ -226,6 +226,8 @@ animations = [{
 [node name="FlyingDemonEnemy" type="Node2D" unique_id=2056629271]
 
 [node name="Flying_Demon" type="AnimatedSprite2D" parent="." unique_id=1424873104]
+position = Vector2(9.536743e-07, 1)
+scale = Vector2(1.3518518, 1.2464789)
 sprite_frames = SubResource("SpriteFrames_aacm4")
 animation = &"hurt"
 autoplay = "hurt"

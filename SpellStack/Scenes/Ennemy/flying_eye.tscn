@@ -199,6 +199,8 @@ animations = [{
 [node name="FlyingEye" type="Node2D" unique_id=186583693]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1589403738]
+position = Vector2(0, 1.9073486e-06)
+scale = Vector2(1.5, 1.2933333)
 sprite_frames = SubResource("SpriteFrames_lin4s")
 animation = &"attack"
 autoplay = "idle"

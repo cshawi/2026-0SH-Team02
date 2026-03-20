@@ -283,6 +283,8 @@ animations = [{
 [node name="BlueGolemEnemy" type="Node2D" unique_id=1954060618]
 
 [node name="Blue_Golem" type="AnimatedSprite2D" parent="." unique_id=911334310]
+position = Vector2(1, 1.9999981)
+scale = Vector2(1.7722222, 1.6953124)
 sprite_frames = SubResource("SpriteFrames_ilc8j")
 animation = &"Idle"
 autoplay = "Idle"

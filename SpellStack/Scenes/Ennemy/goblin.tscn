@@ -171,7 +171,9 @@ animations = [{
 [node name="Goblin" type="Node2D" unique_id=386911349]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=951301524]
+position = Vector2(-1.9999962, 1)
+scale = Vector2(1.4666667, 1.36)
 sprite_frames = SubResource("SpriteFrames_m67yp")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.68124837
+frame_progress = 0.7971069

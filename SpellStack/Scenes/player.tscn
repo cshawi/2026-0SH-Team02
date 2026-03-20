@@ -351,7 +351,7 @@ animations = [{
 [node name="player" type="Node2D" unique_id=1358931285]
 script = ExtResource("1_v0iea")
 
-[node name="idle" type="AnimatedSprite2D" parent="." unique_id=1654219266]
+[node name="player" type="AnimatedSprite2D" parent="." unique_id=1654219266]
 sprite_frames = SubResource("SpriteFrames_qqcod")
 animation = &"second_attack"
 autoplay = "idle"
