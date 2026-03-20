@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://d1jod866rvsct"]
+
+[ext_resource type="FontFile" uid="uid://clnuk6ynow73o" path="res://assets/Fonts/DurendalAndOliphantRegular-LVwL4.ttf" id="1_i1muu"]
+[ext_resource type="Script" uid="uid://dn5g33v74gi7v" path="res://Script/Pause/menu_pause.gd" id="1_n8bbg"]
+
+[node name="MenuPause" type="Control" unique_id=1791061765]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_n8bbg")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1503254666]
+layout_mode = 0
+offset_top = -4.0
+offset_right = 1159.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.70980394)
+
+[node name="ResumeButtonContainer" type="VBoxContainer" parent="." unique_id=1325639374]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 520.0
+offset_right = 302.0
+offset_bottom = 551.0
+
+[node name="Resume" type="Button" parent="ResumeButtonContainer" unique_id=1133803168]
+layout_mode = 2
+text = "Resume "
+
+[node name="QuitButtonContainer" type="VBoxContainer" parent="." unique_id=678488938]
+layout_mode = 0
+offset_left = 917.0
+offset_top = 500.0
+offset_right = 1078.0
+offset_bottom = 540.0
+
+[node name="Quit" type="Button" parent="QuitButtonContainer" unique_id=1387269509]
+layout_mode = 2
+text = "Quit"
+
+[node name="LabelContainer" type="VBoxContainer" parent="." unique_id=760799212]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 45.0
+offset_right = 651.0
+offset_bottom = 170.0
+alignment = 1
+
+[node name="Label" type="Label" parent="LabelContainer" unique_id=2035232399]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.4627451, 1)
+theme_override_fonts/font = ExtResource("1_i1muu")
+theme_override_font_sizes/font_size = 96
+text = "Pause"
