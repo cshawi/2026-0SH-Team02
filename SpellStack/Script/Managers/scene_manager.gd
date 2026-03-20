@@ -2,17 +2,18 @@ extends Node
 
 @onready var LevelHolder: Node = $"../../LevelHolder"
 @onready var MainMenu: Node = $"../../UI/MainMenu"
-@onready var level_scene = load("res://scenes/level_test.tscn")
-@onready var level_instance = level_scene.instantiate()
-
+@onready var level_scene : Level = $"../../LevelHolder/LevelTest"
+@onready var player : Player = $"../../player"
+@onready var playerAction = $"../../UI/PlayerAction"
 
 func _ready() -> void:
 	pass # Replace with function body.
 
 func start_game() -> void:
-	for child in LevelHolder.get_children():
-		child.queue_free()
-	
 	MainMenu.diseapear()
+	LevelHolder.visible = true
+	level_scene.visible = true
+	player.visible = true
+	playerAction.visible = true
 	
-	LevelHolder.add_child(level_instance)
+	
