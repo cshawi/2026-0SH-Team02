@@ -55,6 +55,7 @@ visible = false
 z_index = 1
 
 [node name="Player" parent="LevelHolder" unique_id=522176388 node_paths=PackedStringArray("target_manager") instance=ExtResource("3_kry3j")]
+position = Vector2(398, 272)
 stats = ExtResource("7_fevyy")
 target_manager = NodePath("../../Managers/TargetManager")
 actions = Array[ExtResource("9_fevyy")]([ExtResource("9_hibaj")])
