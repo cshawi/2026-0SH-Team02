@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://jx05jy2f8o2c"]
+
+[ext_resource type="FontFile" uid="uid://clnuk6ynow73o" path="res://assets/Fonts/DurendalAndOliphantRegular-LVwL4.ttf" id="1_oqroo"]
+[ext_resource type="Script" uid="uid://c4agwnm32i7wt" path="res://Script/Levels/loading.gd" id="1_vxmqe"]
+
+[node name="Loading" type="Node2D" unique_id=930756989]
+script = ExtResource("1_vxmqe")
+
+[node name="Loading_time" type="Timer" parent="." unique_id=590163203]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1120725521]
+offset_right = 1156.0
+offset_bottom = 658.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1324266828]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 403.0
+offset_top = 223.0
+offset_right = 762.5
+offset_bottom = 435.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_oqroo")
+theme_override_font_sizes/font_size = 60
+text = "Loading"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="Loading_time" to="." method="_on_loading_time_timeout"]

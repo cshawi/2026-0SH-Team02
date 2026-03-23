@@ -25,7 +25,7 @@ func _ready() -> void:
 	target_manager.target_selected.connect(_on_target_selected)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 	
 func _on_action_selected(action):

@@ -8,6 +8,7 @@ var enemies_character : Array[Ennemi] # voir la mecanique de packed scene pour p
 @onready var game_over_ui = get_node_or_null("../../UI/GameOver")# a deplacer dans game manager dans 3e livrable 
 @onready var win_ui = get_node_or_null("../../UI/WinUi")
 @onready var level_holder = $"../../LevelHolder"
+@onready var Game_Manager = $"../GameManager"
 
 var current_character : Entity # a changer pour plus tard Celui qui a le tour
 
@@ -33,7 +34,7 @@ func _ready() -> void:
 	else:
 		print("player ready")
 		
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if game_over:
 		return
 	
@@ -61,13 +62,25 @@ func connectionVerif():
 		if !actor.turn_finished.is_connected(end_turn):
 			print("Connecting signal for", actor)
 			actor.turn_finished.connect(end_turn)
-			
-			
+
 
 func start_encounter():
-	summonEncounter();
+	enemies_character.clear()
+	enemies.clear()
+	character_list.clear()
+	turn_order.clear()
+
+	var level = level_holder.get_child(0)
+
+	for child in level.get_children():
+		if child is Ennemi:
+			print("nouvel ennemi reconnu")
+			enemies_character.append(child)
+
+	summonEncounter()
 	character_list.append(player_character)
 	character_list.append_array(enemies_character)
+
 	encounter_state = Encounter.IN_ENCOUNTER
 	start_round()
 
@@ -93,6 +106,9 @@ func end_encounter():
 func pv_verif(): 
 	var to_remove = []
 	for entity in character_list:
+		if not is_instance_valid(entity):
+			continue
+
 		if entity.stats.current_hp <= 0:
 			print(entity)
 			to_remove.append(entity)
@@ -107,15 +123,17 @@ func pv_verif():
 		encounter_state = Encounter.END
 		game_over =true;
 		print("Le player est mort!")
-		get_tree().paused = true
-		game_over_ui.visible = true
+		#get_tree().paused = true
+		#game_over_ui.visible = true
+		Game_Manager.Next_Level()
 		character_list.clear()
 		turn_order.clear()
 	elif(character_list.has(player_character) && character_list.size() == 1):
 		encounter_state = Encounter.END
 		print("Les ennemies sont morts")
-		get_tree().paused = true
-		win_ui.visible = true
+		#get_tree().paused = true
+		#win_ui.visible = true
+		Game_Manager.Next_Level()
 		character_list.clear()
 		turn_order.clear()
 		
@@ -150,6 +168,8 @@ func start_round():
 
 	# Populate turn_order with alive characters
 	for entity in character_list:
+		if not is_instance_valid(entity):
+			continue
 		if entity.stats.current_hp > 0:
 			turn_order.append(entity)
 

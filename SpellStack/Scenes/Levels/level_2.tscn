@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bt8i5jggw3vhx"]
+
+[ext_resource type="Script" uid="uid://nnes8ppoxjr3" path="res://Script/Levels/level_2.gd" id="1_7qxk6"]
+[ext_resource type="PackedScene" uid="uid://t1euthvr0ft5" path="res://Scenes/Enemy.tscn" id="2_ucdhh"]
+[ext_resource type="Script" uid="uid://hjwf2y36wa6m" path="res://Script/Characters/Ennemies/basic_ennemi/basic_enemy_stats.gd" id="3_oylv5"]
+
+[sub_resource type="Resource" id="Resource_w2ac1"]
+script = ExtResource("3_oylv5")
+max_hp = 50.0
+
+[node name="Level_2" type="Node2D" unique_id=38744226]
+script = ExtResource("1_7qxk6")
+
+[node name="Enemy" parent="." unique_id=1707337322 instance=ExtResource("2_ucdhh")]
+position = Vector2(739, 154)
+scale = Vector2(2, 2.048)
+stats = SubResource("Resource_w2ac1")

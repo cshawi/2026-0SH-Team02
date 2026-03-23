@@ -13,3 +13,7 @@ config_version=5
 config/name="SpellStack"
 run/main_scene="uid://dscac1uvwn47g"
 config/features=PackedStringArray("4.6")
+
+[autoload]
+
+Events="*uid://cpy6c6jxm5abe"
