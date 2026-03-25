@@ -7,7 +7,6 @@
 script = ExtResource("1_vxmqe")
 
 [node name="Loading_time" type="Timer" parent="." unique_id=590163203]
-wait_time = 4.0
 one_shot = true
 autostart = true
 

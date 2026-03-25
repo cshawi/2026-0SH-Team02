@@ -14,7 +14,6 @@
 [ext_resource type="Script" uid="uid://bf4hgb2868r4s" path="res://Script/Actions/action.gd" id="9_fevyy"]
 [ext_resource type="Resource" uid="uid://bs6bph8c5fam1" path="res://Resources/actions_cards/actions/greatDouble.tres" id="9_hibaj"]
 [ext_resource type="PackedScene" uid="uid://cawo3r0hanyyq" path="res://Scenes/Managers/battle_manager.tscn" id="10_hptm8"]
-[ext_resource type="PackedScene" uid="uid://b4x7swi4s817n" path="res://Scenes/Levels/level_test.tscn" id="10_k12tt"]
 [ext_resource type="Resource" uid="uid://cixtxot8kvyab" path="res://Resources/actions_cards/actions/simpleSpell.tres" id="17_b3802"]
 [ext_resource type="PackedScene" uid="uid://c6tsxoi567laa" path="res://Scenes/Managers/target_manager.tscn" id="17_h1bgf"]
 
@@ -47,9 +46,6 @@ visible = false
 [node name="LevelHolder" type="Node2D" parent="." unique_id=1645931298]
 visible = false
 z_index = 1
-
-[node name="LevelTest" parent="LevelHolder" unique_id=1652021035 instance=ExtResource("10_k12tt")]
-visible = false
 
 [node name="Managers" type="Node" parent="." unique_id=580458911]
 

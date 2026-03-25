@@ -24,5 +24,5 @@ func _on_enemy_clicked(enemy): # reagit pas
 	selecting = false
 	target_selected.emit(enemy)
 
-#func select_target(enemy):
-	#target_selected.emit(enemy)
+func select_target(enemy):
+	target_selected.emit(enemy)

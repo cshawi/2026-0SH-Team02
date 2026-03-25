@@ -7,9 +7,9 @@ var enemies_character : Array[Ennemi] # voir la mecanique de packed scene pour p
 
 @onready var game_over_ui = get_node_or_null("../../UI/GameOver")# a deplacer dans game manager dans 3e livrable 
 @onready var win_ui = get_node_or_null("../../UI/WinUi")
-@onready var level_holder = $"../../LevelHolder"
 @onready var Game_Manager = $"../GameManager"
 
+var level_holder : Node2D
 var current_character : Entity # a changer pour plus tard Celui qui a le tour
 
 var character_list : Array [Entity] =[]
@@ -24,9 +24,7 @@ enum Encounter { NONE, START, IN_ENCOUNTER ,END   }
 var encounter_state : Encounter = Encounter.NONE
 
 func _ready() -> void:
-	var level : Level = level_holder.get_child(0)
-	for child in level.get_children():
-		enemies_character.append(child)
+	
 
 	
 	if player_character == null:
@@ -40,8 +38,8 @@ func _process(_delta: float) -> void:
 	
 	match encounter_state:	
 		Encounter.NONE:
-			print("State :NONE --> Entering Start State (test)");
-			start_encounter()
+			pass
+			#start_encounter()
 			
 		Encounter.START:
 			#print("START");
@@ -64,19 +62,18 @@ func connectionVerif():
 			actor.turn_finished.connect(end_turn)
 
 
-func start_encounter():
+func start_encounter(level):
 	enemies_character.clear()
 	enemies.clear()
 	character_list.clear()
 	turn_order.clear()
-
-	var level = level_holder.get_child(0)
-
+	
 	for child in level.get_children():
 		if child is Ennemi:
 			print("nouvel ennemi reconnu")
 			enemies_character.append(child)
-
+	
+	print(enemies_character)
 	summonEncounter()
 	character_list.append(player_character)
 	character_list.append_array(enemies_character)
