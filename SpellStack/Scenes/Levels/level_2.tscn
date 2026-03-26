@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://nnes8ppoxjr3" path="res://Script/Levels/level_2.gd" id="1_7qxk6"]
 [ext_resource type="PackedScene" uid="uid://t1euthvr0ft5" path="res://Scenes/Enemy.tscn" id="2_ucdhh"]
 [ext_resource type="Script" uid="uid://hjwf2y36wa6m" path="res://Script/Characters/Ennemies/basic_ennemi/basic_enemy_stats.gd" id="3_oylv5"]
+[ext_resource type="Script" uid="uid://bf4hgb2868r4s" path="res://Script/Actions/action.gd" id="4_ovj6s"]
+[ext_resource type="Resource" uid="uid://o6drlxvsn83w" path="res://Resources/actions_cards/actions/EnenyUniqueAction/Goblin/punch.tres" id="5_8qsmg"]
 
 [sub_resource type="Resource" id="Resource_w2ac1"]
 script = ExtResource("3_oylv5")
@@ -15,4 +17,4 @@ script = ExtResource("1_7qxk6")
 position = Vector2(739, 154)
 scale = Vector2(2, 2.048)
 stats = SubResource("Resource_w2ac1")
-actions = null
+actions = Array[ExtResource("4_ovj6s")]([ExtResource("5_8qsmg")])
