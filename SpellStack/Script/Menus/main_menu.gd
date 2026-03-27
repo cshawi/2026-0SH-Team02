@@ -4,9 +4,7 @@ extends Control
 @onready var GameManager : Node = $"../../Managers/GameManager"
 
 func _on_play_btn_pressed() -> void:
-	SceneManager.start_game()
-	# appeler le game manager pour commencer la partie
-	pass # Replace with function body.
+	Events.emit_signal("start_game")
 
 func _on_quit_btn_pressed() -> void:
 	get_tree().quit();

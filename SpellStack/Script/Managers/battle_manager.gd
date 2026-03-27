@@ -3,12 +3,13 @@ extends Node
 class_name Battle_manager
 
 @export var player_character : Player
-@export var enemies_character : Array[Ennemi] # voir la mecanique de packed scene pour prendre les ennemies selont genre le lvl de l'encounter pour prochain livrable
+var enemies_character : Array[Ennemi] # voir la mecanique de packed scene pour prendre les ennemies selont genre le lvl de l'encounter pour prochain livrable
 
 @onready var game_over_ui = get_node_or_null("../../UI/GameOver")# a deplacer dans game manager dans 3e livrable 
 @onready var win_ui = get_node_or_null("../../UI/WinUi")
+@onready var Game_Manager = $"../GameManager"
 
-
+var level_holder : Node2D
 var current_character : Entity # a changer pour plus tard Celui qui a le tour
 
 var character_list : Array [Entity] =[]
@@ -23,19 +24,22 @@ enum Encounter { NONE, START, IN_ENCOUNTER ,END   }
 var encounter_state : Encounter = Encounter.NONE
 
 func _ready() -> void:
+	
+
+	
 	if player_character == null:
 		print("error player not found");
 	else:
 		print("player ready")
 		
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if game_over:
 		return
 	
 	match encounter_state:	
 		Encounter.NONE:
-			print("State :NONE --> Entering Start State (test)");
-			start_encounter()
+			pass
+			#start_encounter()
 			
 		Encounter.START:
 			#print("START");
@@ -56,13 +60,24 @@ func connectionVerif():
 		if !actor.turn_finished.is_connected(end_turn):
 			print("Connecting signal for", actor)
 			actor.turn_finished.connect(end_turn)
-			
-			
 
-func start_encounter():
-	summonEncounter();
+
+func start_encounter(level):
+	enemies_character.clear()
+	enemies.clear()
+	character_list.clear()
+	turn_order.clear()
+	
+	for child in level.get_children():
+		if child is Ennemi:
+			print("nouvel ennemi reconnu")
+			enemies_character.append(child)
+	
+	print(enemies_character)
+	summonEncounter()
 	character_list.append(player_character)
 	character_list.append_array(enemies_character)
+
 	encounter_state = Encounter.IN_ENCOUNTER
 	start_round()
 
@@ -88,7 +103,11 @@ func end_encounter():
 func pv_verif(): 
 	var to_remove = []
 	for entity in character_list:
+		if not is_instance_valid(entity):
+			continue
+
 		if entity.stats.current_hp <= 0:
+			print(entity)
 			to_remove.append(entity)
 		
 	for entity in to_remove:
@@ -101,15 +120,17 @@ func pv_verif():
 		encounter_state = Encounter.END
 		game_over =true;
 		print("Le player est mort!")
-		get_tree().paused = true
-		game_over_ui.visible = true
+		#get_tree().paused = true
+		#game_over_ui.visible = true
+		Game_Manager.Next_Level()
 		character_list.clear()
 		turn_order.clear()
 	elif(character_list.has(player_character) && character_list.size() == 1):
 		encounter_state = Encounter.END
 		print("Les ennemies sont morts")
-		get_tree().paused = true
-		win_ui.visible = true
+		#get_tree().paused = true
+		#win_ui.visible = true
+		Game_Manager.Next_Level()
 		character_list.clear()
 		turn_order.clear()
 		
@@ -144,6 +165,8 @@ func start_round():
 
 	# Populate turn_order with alive characters
 	for entity in character_list:
+		if not is_instance_valid(entity):
+			continue
 		if entity.stats.current_hp > 0:
 			turn_order.append(entity)
 

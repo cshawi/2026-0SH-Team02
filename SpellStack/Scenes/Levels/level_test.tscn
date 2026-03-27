@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b4x7swi4s817n"]
+
+[ext_resource type="Script" uid="uid://bpo5bobjeupg6" path="res://Script/Levels/level_test.gd" id="1_ojicq"]
+[ext_resource type="PackedScene" uid="uid://bk3vg4x1s8wxp" path="res://Scenes/Ennemy/Skeleton_Enemy.tscn" id="2_ojicq"]
+[ext_resource type="Script" uid="uid://hjwf2y36wa6m" path="res://Script/Characters/Ennemies/basic_ennemi/basic_enemy_stats.gd" id="3_qkmes"]
+[ext_resource type="PackedScene" uid="uid://df1aiq6eklh7r" path="res://Scenes/Ennemy/Blue_Golem_Enemy.tscn" id="4_qkmes"]
+
+[sub_resource type="Resource" id="Resource_gm2ak"]
+script = ExtResource("3_qkmes")
+
+[sub_resource type="Resource" id="Resource_1bsl4"]
+script = ExtResource("3_qkmes")
+
+[node name="LevelTest" type="Node2D" unique_id=1652021035]
+script = ExtResource("1_ojicq")
+
+[node name="SkeletonEnemy" parent="." unique_id=1690737638 instance=ExtResource("2_ojicq")]
+position = Vector2(846, 153)
+stats = SubResource("Resource_gm2ak")
+
+[node name="BlueGolemEnemy" parent="." unique_id=1954060618 instance=ExtResource("4_qkmes")]
+position = Vector2(826, 402)
+stats = SubResource("Resource_1bsl4")

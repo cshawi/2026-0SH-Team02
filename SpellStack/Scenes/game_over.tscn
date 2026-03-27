@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d0ksjfmfp51ru"]
 
-[ext_resource type="FontFile" uid="uid://dv0jdi3bsvcmx" path="res://assets/Fonts/DurendalAndOliphantRegular-LVwL4.ttf" id="1_ojehl"]
+[ext_resource type="FontFile" uid="uid://clnuk6ynow73o" path="res://assets/Fonts/DurendalAndOliphantRegular-LVwL4.ttf" id="1_ojehl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8fo1c"]
 font = ExtResource("1_ojehl")
@@ -34,6 +34,7 @@ offset_top = -11.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ojehl")
 text = "Game over"
 label_settings = SubResource("LabelSettings_8fo1c")
 horizontal_alignment = 1

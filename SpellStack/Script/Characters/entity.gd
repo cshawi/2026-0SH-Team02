@@ -11,7 +11,7 @@ var turn_state = Turn_state.WAITING
 func _ready() -> void:
 	turn_state = Turn_state.WAITING
 			
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func start_turn():

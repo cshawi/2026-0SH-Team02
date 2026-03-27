@@ -6,8 +6,11 @@ signal action_selected(action)
 
 @onready var container = $Layout
 
-func show_actions(actions):
+func _ready():
+	print(container)
 
+func show_actions(actions):
+	
 	for child in container.get_children():
 		child.queue_free()
 
