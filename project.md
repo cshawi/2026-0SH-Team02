@@ -24,8 +24,11 @@
 # 2. Livrable #2
 - Le joueur peut effectuer et sélectionner un action
 - Le joueur peut sélectionner un ennemi et effectuer sont tour s'il a une action
-- Les ennemis peuvent être tuer
-- Le joueur et les ennemis ont une apparence 
+- Les ennemis et le joueur peuvent être tués
+- Le joueur et les ennemis ont une apparence
+- le joueur peut affronter plusieurs vagues d'ennemis
+- le joueur peut gagner
+- le joueur peut lancer une partie 
 
 # 3. Livrable #3
 
