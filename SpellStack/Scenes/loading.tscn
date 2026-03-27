@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://jx05jy2f8o2c"]
 
-[ext_resource type="FontFile" uid="uid://clnuk6ynow73o" path="res://assets/Fonts/DurendalAndOliphantRegular-LVwL4.ttf" id="1_oqroo"]
-[ext_resource type="Script" uid="uid://c4agwnm32i7wt" path="res://Script/Levels/loading.gd" id="1_vxmqe"]
+[ext_resource type="Script" uid="uid://c4agwnm32i7wt" path="res://Script/Levels/loading.gd" id="1_k66n3"]
+[ext_resource type="FontFile" uid="uid://clnuk6ynow73o" path="res://assets/Fonts/DurendalAndOliphantRegular-LVwL4.ttf" id="2_31xe0"]
 
 [node name="Loading" type="Node2D" unique_id=930756989]
-script = ExtResource("1_vxmqe")
+script = ExtResource("1_k66n3")
 
 [node name="Loading_time" type="Timer" parent="." unique_id=590163203]
 one_shot = true
@@ -27,7 +27,7 @@ offset_right = 762.5
 offset_bottom = 435.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("1_oqroo")
+theme_override_fonts/font = ExtResource("2_31xe0")
 theme_override_font_sizes/font_size = 60
 text = "Loading"
 horizontal_alignment = 1

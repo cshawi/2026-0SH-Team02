@@ -3,9 +3,7 @@ extends Node
 @onready var SceneManager = $"../SceneManager"
 @onready var Battle_Manager = $"../BattleManager"
 
-var first_level_path = preload("res://Scenes/Levels/level_test.tscn")
-var second_level_path = preload("res://Scenes/Levels/level_2.tscn")
-var LoadingPath = preload("res://Scenes/Levels/loading.tscn")
+var LoadingPath = preload("res://Scenes/loading.tscn")
 
 var level_list : Array [Level] =[]
 var level_order : Array = []
@@ -16,10 +14,7 @@ func _ready():
 	Events.restart_game.connect(_on_game_restart)
 	Events.start_game.connect(_on_start_game)
 	
-	level_order.append(first_level_path)
-	level_order.append(LoadingPath)
-	level_order.append(second_level_path)
-	
+	level_order = load_levels_from_folder("res://Scenes/Levels")
 
 func Next_Level():
 	if(level_order.is_empty()):
@@ -48,3 +43,20 @@ func _on_loading_finished():
 	
 func _on_game_restart():
 	SceneManager.restart_game()
+
+func load_levels_from_folder(path: String) -> Array:
+	var levels = []
+	
+	var dir = DirAccess.open(path)
+	if dir:
+		dir.list_dir_begin()
+		var file_name = dir.get_next()
+		
+		while file_name != "":
+			if file_name.ends_with(".tscn"):
+				var full_path = path + "/" + file_name
+				levels.append(load(full_path))
+				levels.append(LoadingPath)
+			file_name = dir.get_next()
+	
+	return levels
