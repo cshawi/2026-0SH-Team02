@@ -1,29 +1,23 @@
 [gd_scene format=3 uid="uid://b4x7swi4s817n"]
 
 [ext_resource type="Script" uid="uid://bpo5bobjeupg6" path="res://Script/Levels/level_test.gd" id="1_ojicq"]
-[ext_resource type="PackedScene" uid="uid://t1euthvr0ft5" path="res://Scenes/Enemy.tscn" id="3_gm2ak"]
+[ext_resource type="PackedScene" uid="uid://bk3vg4x1s8wxp" path="res://Scenes/Ennemy/Skeleton_Enemy.tscn" id="2_ojicq"]
 [ext_resource type="Script" uid="uid://hjwf2y36wa6m" path="res://Script/Characters/Ennemies/basic_ennemi/basic_enemy_stats.gd" id="3_qkmes"]
-[ext_resource type="Script" uid="uid://bf4hgb2868r4s" path="res://Script/Actions/action.gd" id="4_gm2ak"]
-[ext_resource type="Resource" uid="uid://o6drlxvsn83w" path="res://Resources/actions_cards/actions/EnenyUniqueAction/Goblin/punch.tres" id="5_1bsl4"]
+[ext_resource type="PackedScene" uid="uid://df1aiq6eklh7r" path="res://Scenes/Ennemy/Blue_Golem_Enemy.tscn" id="4_qkmes"]
 
 [sub_resource type="Resource" id="Resource_gm2ak"]
 script = ExtResource("3_qkmes")
-max_hp = 40.0
 
-[sub_resource type="Resource" id="Resource_ojicq"]
+[sub_resource type="Resource" id="Resource_1bsl4"]
 script = ExtResource("3_qkmes")
 
 [node name="LevelTest" type="Node2D" unique_id=1652021035]
 script = ExtResource("1_ojicq")
 
-[node name="Enemy" parent="." unique_id=1707337322 instance=ExtResource("3_gm2ak")]
-z_index = 1
-position = Vector2(898.99994, 395)
+[node name="SkeletonEnemy" parent="." unique_id=1690737638 instance=ExtResource("2_ojicq")]
+position = Vector2(846, 153)
 stats = SubResource("Resource_gm2ak")
-actions = Array[ExtResource("4_gm2ak")]([ExtResource("5_1bsl4")])
 
-[node name="Enemy2" parent="." unique_id=209631930 instance=ExtResource("3_gm2ak")]
-z_index = 1
-position = Vector2(904, 68)
-stats = SubResource("Resource_ojicq")
-actions = Array[ExtResource("4_gm2ak")]([ExtResource("5_1bsl4")])
+[node name="BlueGolemEnemy" parent="." unique_id=1954060618 instance=ExtResource("4_qkmes")]
+position = Vector2(826, 402)
+stats = SubResource("Resource_1bsl4")
