@@ -301,7 +301,8 @@ actions = Array[ExtResource("3_tal4a")]([ExtResource("4_b78cm")])
 sprite_frames = SubResource("SpriteFrames_ilc8j")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.42478988
+frame_progress = 0.60167223
+flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1084007953]
 script = ExtResource("9_xs078")

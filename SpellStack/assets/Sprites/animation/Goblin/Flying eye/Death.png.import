@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctm713hrb0kl7"
-path="res://.godot/imported/Death.png-6b6405bb8c6057e6ba5e5578409166e7.ctex"
+path="res://.godot/imported/Death.png-20eb3ac02270a830009edf95e4482d60.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/animation/Flying eye/Death.png"
-dest_files=["res://.godot/imported/Death.png-6b6405bb8c6057e6ba5e5578409166e7.ctex"]
+source_file="res://assets/Sprites/animation/Goblin/Flying eye/Death.png"
+dest_files=["res://.godot/imported/Death.png-20eb3ac02270a830009edf95e4482d60.ctex"]
 
 [params]
 

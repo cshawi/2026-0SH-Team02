@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nsy2ft1a4i2"
-path="res://.godot/imported/Take Hit.png-40ab1cc0e5fb0069d7a783300c7a7bc0.ctex"
+path="res://.godot/imported/Take Hit.png-56051b1fc84719aa823a36d1a5085684.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/animation/Flying eye/Take Hit.png"
-dest_files=["res://.godot/imported/Take Hit.png-40ab1cc0e5fb0069d7a783300c7a7bc0.ctex"]
+source_file="res://assets/Sprites/animation/Goblin/Flying eye/Take Hit.png"
+dest_files=["res://.godot/imported/Take Hit.png-56051b1fc84719aa823a36d1a5085684.ctex"]
 
 [params]
 

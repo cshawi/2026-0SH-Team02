@@ -340,5 +340,6 @@ animations = [{
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1312926631]
 sprite_frames = SubResource("SpriteFrames_kjijb")
-animation = &"new_animation"
-frame_progress = 0.5672154
+animation = &"idle"
+autoplay = "idle"
+flip_h = true

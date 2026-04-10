@@ -371,6 +371,7 @@ sprite_frames = SubResource("SpriteFrames_ap85e")
 animation = &"attack"
 autoplay = "idle"
 frame_progress = 0.44314373
+flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1500648111]
 script = ExtResource("6_onqtm")

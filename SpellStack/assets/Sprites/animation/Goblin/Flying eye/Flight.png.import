@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qpuhuuayf7rb"
-path="res://.godot/imported/Flight.png-a70a7699ef163ef4355480d0aeb83ed9.ctex"
+path="res://.godot/imported/Flight.png-1ff3a4d33be0a8e59e696ad944e2b27d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/animation/Flying eye/Flight.png"
-dest_files=["res://.godot/imported/Flight.png-a70a7699ef163ef4355480d0aeb83ed9.ctex"]
+source_file="res://assets/Sprites/animation/Goblin/Flying eye/Flight.png"
+dest_files=["res://.godot/imported/Flight.png-1ff3a4d33be0a8e59e696ad944e2b27d.ctex"]
 
 [params]
 

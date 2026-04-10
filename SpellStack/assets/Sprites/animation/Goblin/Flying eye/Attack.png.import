@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://du0ddn53hwnuh"
-path="res://.godot/imported/Attack.png-9654504e359d489bcffa0f7fe4d31345.ctex"
+path="res://.godot/imported/Attack.png-ccc8990041c188d38adaae23a2c647f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/animation/Flying eye/Attack.png"
-dest_files=["res://.godot/imported/Attack.png-9654504e359d489bcffa0f7fe4d31345.ctex"]
+source_file="res://assets/Sprites/animation/Goblin/Flying eye/Attack.png"
+dest_files=["res://.godot/imported/Attack.png-ccc8990041c188d38adaae23a2c647f3.ctex"]
 
 [params]
 

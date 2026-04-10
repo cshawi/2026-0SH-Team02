@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dqj1284n24tjq"]
 
-[ext_resource type="Texture2D" uid="uid://qpuhuuayf7rb" path="res://assets/Sprites/animation/Flying eye/Flight.png" id="1_hq34d"]
-[ext_resource type="Texture2D" uid="uid://du0ddn53hwnuh" path="res://assets/Sprites/animation/Flying eye/Attack.png" id="1_imkym"]
-[ext_resource type="Texture2D" uid="uid://ctm713hrb0kl7" path="res://assets/Sprites/animation/Flying eye/Death.png" id="1_tk15k"]
-[ext_resource type="Texture2D" uid="uid://nsy2ft1a4i2" path="res://assets/Sprites/animation/Flying eye/Take Hit.png" id="2_imkym"]
+[ext_resource type="Texture2D" uid="uid://qpuhuuayf7rb" path="res://assets/Sprites/animation/Goblin/Flying eye/Flight.png" id="1_hq34d"]
+[ext_resource type="Texture2D" uid="uid://du0ddn53hwnuh" path="res://assets/Sprites/animation/Goblin/Flying eye/Attack.png" id="1_imkym"]
+[ext_resource type="Texture2D" uid="uid://ctm713hrb0kl7" path="res://assets/Sprites/animation/Goblin/Flying eye/Death.png" id="1_tk15k"]
+[ext_resource type="Texture2D" uid="uid://nsy2ft1a4i2" path="res://assets/Sprites/animation/Goblin/Flying eye/Take Hit.png" id="2_imkym"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nu5po"]
 atlas = ExtResource("1_imkym")
@@ -204,3 +204,4 @@ scale = Vector2(1.5, 1.2933333)
 sprite_frames = SubResource("SpriteFrames_lin4s")
 animation = &"attack"
 autoplay = "idle"
+flip_h = true
