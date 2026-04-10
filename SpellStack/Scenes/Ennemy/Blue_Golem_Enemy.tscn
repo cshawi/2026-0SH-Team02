@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://df1aiq6eklh7r"]
 
-[ext_resource type="Script" uid="uid://crd1cv45wwuhc" path="res://Scenes/Ennemy/blue_golem_enemy.gd" id="1_0jk6p"]
+[ext_resource type="Script" uid="uid://crd1cv45wwuhc" path="res://Script/Characters/Ennemies/blue_golem_enemy.gd" id="1_0jk6p"]
 [ext_resource type="Texture2D" uid="uid://srkplb1rqh6u" path="res://assets/Sprites/animation/Blue_Golem_Enemy/Golem_1_idle.png" id="1_iu6v3"]
 [ext_resource type="Script" uid="uid://hjwf2y36wa6m" path="res://Script/Characters/Ennemies/basic_ennemi/basic_enemy_stats.gd" id="2_0jk6p"]
 [ext_resource type="Texture2D" uid="uid://dnga5pgdjifps" path="res://assets/Sprites/animation/Blue_Golem_Enemy/Golem_1_hurt.png" id="2_14gwy"]

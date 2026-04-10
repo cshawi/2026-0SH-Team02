@@ -4,3 +4,5 @@
 
 [resource]
 script = ExtResource("1_1kv1s")
+current_hp = 100.0
+max_hp = 100.0

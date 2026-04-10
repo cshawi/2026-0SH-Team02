@@ -1,13 +1,12 @@
-extends Resource
+extends EntityBaseStats
 
 class_name Basic_enemy_stats
 
-@export_group("Other")
-@export var current_hp: float = 20.0
-
-@export_group("Base Stats")
-@export var max_hp: float = 20.0
-@export var life_steal: float =0.0
-@export var hp_regen: float = 0.0
-@export var armor: int = 0
-@export var penetration: int = 0
+func _init() -> void:
+	max_hp =20
+	current_hp = max_hp
+	armor =0
+	penetration=0
+	hp_regen =0
+	life_steal =0
+	
