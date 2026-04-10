@@ -13,13 +13,14 @@ Un table vous sera installée avec accès à une prise électrique. Vous devez l
 
 ### Ce que nous avons déjà en main :
 
-1. ÉLÉMENT #1
-2. ÉLÉMENT #1
+1. Ordinateur portable 
+2. Charge d'ordinateur
 
 ### Ce que nous aurons besoin provenant de l'école :
 
-1. ÉLÉMENT #1
-2. ÉLÉMENT #1
+1. Écran supplémentaire
+2. Fil HDMI
+3. Souris Filaire USB
 
 ## Heure d'arrivée
 
