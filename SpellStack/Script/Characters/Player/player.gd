@@ -2,16 +2,18 @@ extends Entity
 
 class_name Player
 
-@export var stats : Player_stats
+#@export var stats : Player_stats
+var stats_path: String = "res://Resources/Stats/player_stats.tres"
+var stats: Player_stats
 @export var action_ui : Control
 @export var target_manager : TargetManager # selection de l'enemy en mode selection
-
 var selected_action : Action = null # Pour le mode selection de cible
-
+ 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
 	add_to_group("player_side")
+	stats = load(stats_path).duplicate(true)
 	if stats == null:
 		print("stats null chemin invalid")
 
@@ -20,7 +22,6 @@ func _ready() -> void:
 		
 	action_ui.action_selected.connect(_on_action_selected)
 	action_ui.show_actions(actions)
-	#action_ui.show()
 	
 	target_manager.target_selected.connect(_on_target_selected)
 

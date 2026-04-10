@@ -4,6 +4,8 @@ extends Entity
 #chaque ennemi va heriter de Ennemi
 class_name Ennemi
 @export var target_manager : TargetManager
+
+var stats_path: String = ""
 @export var stats : Basic_enemy_stats
 @onready var click_area = $Area2D
 
