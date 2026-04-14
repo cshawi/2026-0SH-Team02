@@ -24,6 +24,8 @@ func _ready() -> void:
 	action_ui.show_actions(actions)
 	
 	target_manager.target_selected.connect(_on_target_selected)
+	
+	emit_health()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -43,3 +45,6 @@ func _on_target_selected(enemy):
 func start_turn():
 	super.start_turn()
 	selected_action = null
+	
+func emit_health():
+	Events.emit_signal("player_health_changed", stats.current_hp, stats.max_hp)
