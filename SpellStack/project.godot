@@ -19,6 +19,10 @@ config/features=PackedStringArray("4.6")
 Events="*uid://cpy6c6jxm5abe"
 TargetManagerSingleton="*uid://by31orlqjxgpy"
 
+[display]
+
+window/size/viewport_width=1154
+
 [input]
 
 pause={

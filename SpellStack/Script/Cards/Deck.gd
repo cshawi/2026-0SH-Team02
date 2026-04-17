@@ -4,7 +4,7 @@ const CARD_SCENE_PATH = "res://Scenes/Cards/Card.tscn"
 const CARD_DRAW_SPEED = 0.3
 
 var player_deck = ["Fireball","AcidSpray","Splash","Zap" ]
-var card_database_reference = preload("res://Script/CardDatabase.gd")
+var card_database_reference = preload("res://Script/Cards/CardDatabase.gd")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,7 +20,7 @@ func draw_card():
 	#if last card drawn disable deck 
 	if player_deck.size() == 0 :
 		$Area2D/CollisionShape2D.disabled = true 
-		$Sprite2D.visible = false
+		$DeckImage.visible = false
 		$RichTextLabel.visible = false
 		
 	$RichTextLabel.text = str(player_deck.size())
