@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Basic_enemy_stats" format=3 uid="uid://bx0faw1eqlovc"]
+
+[ext_resource type="Script" uid="uid://hjwf2y36wa6m" path="res://Script/Characters/Ennemies/basic_ennemi/basic_enemy_stats.gd" id="1_i5fc5"]
+
+[resource]
+script = ExtResource("1_i5fc5")
+current_hp = 50.0
+max_hp = 50.0
+metadata/_custom_type_script = "uid://hjwf2y36wa6m"

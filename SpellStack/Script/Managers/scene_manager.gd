@@ -4,6 +4,8 @@ extends Node
 @onready var MainMenu: Node = $"../../UI/MainMenu"
 @onready var player : Player = $"../../player"
 @onready var playerAction = $"../../UI/PlayerAction"
+@onready var playerUI = $"../../UI/Hud"
+
 @onready var win_ui = $"../../UI/WinUi"
 @onready var Game_Manager = $"../GameManager"
 
@@ -15,6 +17,7 @@ func start_game() -> void:
 	LevelHolder.visible = true
 	player.visible = true
 	playerAction.visible = true
+	playerUI.visible =true
 
 func next_level(currentScene):
 	for child in LevelHolder.get_children():
@@ -37,10 +40,12 @@ func restart_game():
 func show_ui():
 	playerAction.visible = true
 	player.visible = true
+	playerUI.visible =true
 	
 func hide_ui():
 	playerAction.visible = false
 	player.visible = false
+	playerUI.visible =false
 
 func _after_level_loaded():
 	Game_Manager._on_level_ready()

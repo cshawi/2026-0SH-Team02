@@ -4,4 +4,4 @@ extends Ennemi
 #chaque ennemi va heriter de Ennemi
 class_name Basic_ennemi
 
-@export var basic_stats : Basic_enemy_stats
+#@export var stats : Basic_enemy_stats

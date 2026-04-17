@@ -2,16 +2,18 @@ extends Entity
 
 class_name Player
 
-@export var stats : Player_stats
+#@export var stats : Player_stats
+var stats_path: String = "res://Resources/Stats/player_stats.tres"
+var stats: Player_stats
 @export var action_ui : Control
 @export var target_manager : TargetManager # selection de l'enemy en mode selection
-
 var selected_action : Action = null # Pour le mode selection de cible
-
+ 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
 	add_to_group("player_side")
+	stats = load(stats_path).duplicate(true)
 	if stats == null:
 		print("stats null chemin invalid")
 
@@ -20,9 +22,10 @@ func _ready() -> void:
 		
 	action_ui.action_selected.connect(_on_action_selected)
 	action_ui.show_actions(actions)
-	#action_ui.show()
 	
 	target_manager.target_selected.connect(_on_target_selected)
+	
+	emit_health()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -37,8 +40,17 @@ func _on_action_selected(action):
 func _on_target_selected(enemy):
 	if(turn_state== Turn_state.ACTING):
 		perform_action(selected_action, enemy)
+		play_attack()
 		selected_action = null
 		
 func start_turn():
 	super.start_turn()
 	selected_action = null
+	
+func emit_health():
+	Events.emit_signal("player_health_changed", stats.current_hp, stats.max_hp)
+	
+func play_attack():
+	$player.play("attack")
+	await $player.animation_looped
+	$player.play("idle")

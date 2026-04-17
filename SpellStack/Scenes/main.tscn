@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://bmi3okhlq8rsd" path="res://Scenes/hud.tscn" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://bcjpgi0nra7bh" path="res://Scenes/main_menu.tscn" id="2_8gbba"]
-[ext_resource type="Script" uid="uid://biuygucgswgph" path="res://Script/Characters/Player/player_stats.gd" id="2_k12tt"]
 [ext_resource type="PackedScene" uid="uid://d3yn6b6axh4kb" path="res://Scenes/Managers/game_manager.tscn" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://dsuyku6fdqoo7" path="res://Scenes/player_action.tscn" id="3_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://basd3ouwrxfvs" path="res://Scenes/player.tscn" id="3_kry3j"]
@@ -13,14 +12,10 @@
 [ext_resource type="Script" uid="uid://bv8ksj32dbywc" path="res://Script/Managers/scene_manager.gd" id="7_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://ce3y8pf07s6am" path="res://Scenes/Managers/sound_manager.tscn" id="8_hptm8"]
 [ext_resource type="Script" uid="uid://bf4hgb2868r4s" path="res://Script/Actions/action.gd" id="9_fevyy"]
-[ext_resource type="Resource" uid="uid://bs6bph8c5fam1" path="res://Resources/actions_cards/actions/greatDouble.tres" id="9_hibaj"]
+[ext_resource type="Resource" uid="uid://bs6bph8c5fam1" path="res://Resources/actions_cards/actions/playerActions/greatDouble.tres" id="9_hibaj"]
 [ext_resource type="PackedScene" uid="uid://cawo3r0hanyyq" path="res://Scenes/Managers/battle_manager.tscn" id="10_hptm8"]
-[ext_resource type="Resource" uid="uid://cixtxot8kvyab" path="res://Resources/actions_cards/actions/simpleSpell.tres" id="17_b3802"]
+[ext_resource type="Resource" uid="uid://cixtxot8kvyab" path="res://Resources/actions_cards/actions/playerActions/simpleSpell.tres" id="17_b3802"]
 [ext_resource type="PackedScene" uid="uid://c6tsxoi567laa" path="res://Scenes/Managers/target_manager.tscn" id="17_h1bgf"]
-
-[sub_resource type="Resource" id="Resource_jkdf5"]
-script = ExtResource("2_k12tt")
-metadata/_custom_type_script = "uid://biuygucgswgph"
 
 [node name="Main" type="Node2D" unique_id=179179789]
 z_index = -1
@@ -67,8 +62,7 @@ player_character = NodePath("../../player")
 
 [node name="player" parent="." unique_id=1358931285 node_paths=PackedStringArray("action_ui", "target_manager") instance=ExtResource("3_kry3j")]
 visible = false
-position = Vector2(290, 287)
-stats = SubResource("Resource_jkdf5")
+position = Vector2(317, 474)
 action_ui = NodePath("../UI/PlayerAction")
 target_manager = NodePath("../Managers/TargetManager")
 actions = Array[ExtResource("9_fevyy")]([ExtResource("9_hibaj"), ExtResource("17_b3802")])

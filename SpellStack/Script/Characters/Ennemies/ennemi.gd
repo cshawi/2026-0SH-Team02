@@ -4,6 +4,8 @@ extends Entity
 #chaque ennemi va heriter de Ennemi
 class_name Ennemi
 @export var target_manager : TargetManager
+
+var stats_path: String = ""
 @export var stats : Basic_enemy_stats
 @onready var click_area = $Area2D
 
@@ -38,8 +40,9 @@ func choose_action():
 		end_turn()
 		return
 	
-	perform_action(action, target)  # This should also be tracked for successes or failures.
-
+	perform_action(action, target) 
+	_attack()
+	 # This should also be tracked for successes or failures.
 
 func ai_choose_target():
 	var player_side = get_tree().get_nodes_in_group("player_side") # pas juste le joeur en cas si on creer des aident au autre
@@ -54,3 +57,9 @@ func _on_clicked():
 	if turn_state == Turn_state.WAITING:
 		print("enemy clicked")
 		clicked.emit(self)
+
+func _attack():
+	pass
+
+func _on_death():
+	pass

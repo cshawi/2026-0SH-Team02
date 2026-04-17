@@ -24,9 +24,6 @@ enum Encounter { NONE, START, IN_ENCOUNTER ,END   }
 var encounter_state : Encounter = Encounter.NONE
 
 func _ready() -> void:
-	
-
-	
 	if player_character == null:
 		print("error player not found");
 	else:
@@ -60,7 +57,6 @@ func connectionVerif():
 		if !actor.turn_finished.is_connected(end_turn):
 			print("Connecting signal for", actor)
 			actor.turn_finished.connect(end_turn)
-
 
 func start_encounter(level):
 	enemies_character.clear()
@@ -114,6 +110,11 @@ func pv_verif():
 		entity.turn_state = entity.Turn_state.DEAD
 		character_list.erase(entity)
 		turn_order.erase(entity)
+		
+		# dire à l'entité de jouer son animation de mort 
+		if(entity is Ennemi):
+			await entity._on_death()
+		
 		entity.queue_free()
 		
 	if(!character_list.has(player_character)):
@@ -139,7 +140,7 @@ func end_turn(actor):
 	if actor != current_character:
 		print("Ignoring turn end from", actor.name)
 		return
-	pv_verif()  # Remove characters with 0 HP
+	await pv_verif()  # Remove characters with 0 HP
 	
 	
 	print("Character status end turn")
