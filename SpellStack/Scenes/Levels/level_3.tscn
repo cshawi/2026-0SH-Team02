@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b2ufu11fpbdj3"]
+
+[ext_resource type="Script" uid="uid://bcnvb0t18ik3f" path="res://Script/Levels/level_3.gd" id="1_rc141"]
+[ext_resource type="PackedScene" uid="uid://bk3vg4x1s8wxp" path="res://Scenes/Ennemy/Skeleton_Enemy.tscn" id="1_t8c31"]
+[ext_resource type="Script" uid="uid://hjwf2y36wa6m" path="res://Script/Characters/Ennemies/basic_ennemi/basic_enemy_stats.gd" id="2_rc141"]
+[ext_resource type="PackedScene" uid="uid://dqj1284n24tjq" path="res://Scenes/Ennemy/Flying_Eye_Enemy.tscn" id="3_yy6i0"]
+[ext_resource type="PackedScene" path="res://Scenes/lava_level.tscn" id="4_167vu"]
+
+[sub_resource type="Resource" id="Resource_x1k1j"]
+script = ExtResource("2_rc141")
+
+[node name="level_3" type="Node2D" unique_id=555044649]
+script = ExtResource("1_rc141")
+
+[node name="SkeletonEnemy" parent="." unique_id=1690737638 instance=ExtResource("1_t8c31")]
+position = Vector2(718, 456.00003)
+stats = SubResource("Resource_x1k1j")
+
+[node name="Flying_Eye_Ennemy" parent="." unique_id=186583693 instance=ExtResource("3_yy6i0")]
+position = Vector2(881.00006, 238.00002)
+
+[node name="Level_Lava" parent="." unique_id=2130039711 instance=ExtResource("4_167vu")]
+metadata/_edit_lock_ = true

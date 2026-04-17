@@ -62,7 +62,7 @@ player_character = NodePath("../../player")
 
 [node name="player" parent="." unique_id=1358931285 node_paths=PackedStringArray("action_ui", "target_manager") instance=ExtResource("3_kry3j")]
 visible = false
-position = Vector2(290, 287)
+position = Vector2(317, 474)
 action_ui = NodePath("../UI/PlayerAction")
 target_manager = NodePath("../Managers/TargetManager")
 actions = Array[ExtResource("9_fevyy")]([ExtResource("9_hibaj"), ExtResource("17_b3802")])

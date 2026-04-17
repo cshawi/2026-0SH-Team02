@@ -1,15 +1,18 @@
 [gd_scene format=3 uid="uid://wk1vqatvn8ec"]
 
-[ext_resource type="Script" uid="uid://bpo5bobjeupg6" path="res://Script/Levels/level_test.gd" id="1_cyadu"]
-[ext_resource type="PackedScene" uid="uid://dgxfk8cyb6vsb" path="res://Scenes/Ennemy/Shroom_Enemy.tscn" id="3_iixi8"]
+[ext_resource type="Script" uid="uid://b5pex0g53on5g" path="res://Script/Levels/level_1.gd" id="1_iixi8"]
+[ext_resource type="PackedScene" uid="uid://dgxfk8cyb6vsb" path="res://Scenes/Ennemy/Shroom_enemy.tscn" id="3_iixi8"]
+[ext_resource type="PackedScene" path="res://Scenes/dungeon_level.tscn" id="4_iixi8"]
 [ext_resource type="PackedScene" uid="uid://bk3vg4x1s8wxp" path="res://Scenes/Ennemy/Skeleton_Enemy.tscn" id="7_jv26f"]
 
-
-[node name="LevelTest" type="Node2D" unique_id=1652021035]
-script = ExtResource("1_cyadu")
+[node name="Level_1" type="Node2D" unique_id=1652021035]
+script = ExtResource("1_iixi8")
 
 [node name="ShroomEnemy" parent="." unique_id=1864827885 instance=ExtResource("3_iixi8")]
-position = Vector2(906.00006, 389)
+position = Vector2(865, 390)
 
 [node name="SkeletonEnemy" parent="." unique_id=1690737638 instance=ExtResource("7_jv26f")]
-position = Vector2(916.00006, 162)
+position = Vector2(668.00006, 519)
+
+[node name="Level_Dungeon" parent="." unique_id=117723881 instance=ExtResource("4_iixi8")]
+metadata/_edit_lock_ = true
