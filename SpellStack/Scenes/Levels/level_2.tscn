@@ -2,10 +2,14 @@
 
 [ext_resource type="Script" uid="uid://nnes8ppoxjr3" path="res://Script/Levels/level_2.gd" id="1_7qxk6"]
 [ext_resource type="PackedScene" uid="uid://df1aiq6eklh7r" path="res://Scenes/Ennemy/Blue_Golem_Enemy.tscn" id="2_ucdhh"]
+[ext_resource type="PackedScene" path="res://Scenes/crypt_level.tscn" id="3_oylv5"]
 
 [node name="Level_2" type="Node2D" unique_id=38744226]
 script = ExtResource("1_7qxk6")
 
 [node name="BlueGolemEnemy" parent="." unique_id=1954060618 instance=ExtResource("2_ucdhh")]
-position = Vector2(830, 305)
+position = Vector2(753, 399)
 scale = Vector2(4, 4)
+
+[node name="Level_Crypt" parent="." unique_id=1951452275 instance=ExtResource("3_oylv5")]
+metadata/_edit_lock_ = true
