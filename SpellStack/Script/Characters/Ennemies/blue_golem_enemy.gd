@@ -10,4 +10,12 @@ func _ready() -> void:
 	if stats == null:
 		print("stats null chemin invalid pour " , self )
 	super._ready()
+
+func _attack():
+	$Blue_Golem.play("attack")
+	await $Blue_Golem.animation_looped
+	$Blue_Golem.play("idle")
 	
+func _on_death():
+	$Blue_Golem.play("death")
+	await $Blue_Golem.animation_looped

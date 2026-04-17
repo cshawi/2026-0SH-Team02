@@ -210,7 +210,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"attack",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -239,7 +239,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"attack2",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -265,7 +265,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"death",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -282,7 +282,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"hitting",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -305,7 +305,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -316,7 +316,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"jump",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -345,7 +345,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 5.0
+"speed": 9.0
 }]
 
 [node name="player" type="Node2D" unique_id=1358931285]
@@ -353,6 +353,5 @@ script = ExtResource("1_v0iea")
 
 [node name="player" type="AnimatedSprite2D" parent="." unique_id=1654219266]
 sprite_frames = SubResource("SpriteFrames_qqcod")
-animation = &"attack"
+animation = &"run"
 autoplay = "idle"
-frame_progress = 0.80606806

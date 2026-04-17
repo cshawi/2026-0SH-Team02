@@ -38,8 +38,14 @@ func _on_action_selected(action):
 func _on_target_selected(enemy):
 	if(turn_state== Turn_state.ACTING):
 		perform_action(selected_action, enemy)
+		play_attack()
 		selected_action = null
 		
 func start_turn():
 	super.start_turn()
 	selected_action = null
+	
+func play_attack():
+	$player.play("attack")
+	await $player.animation_looped
+	$player.play("idle")

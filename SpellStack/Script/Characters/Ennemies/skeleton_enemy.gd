@@ -10,3 +10,13 @@ func _ready() -> void:
 	if stats == null:
 		print("stats null chemin invalid pour "  , self )
 	super._ready()
+
+func _attack():
+	$Skeleton.play("attack")
+	await $Skeleton.animation_looped
+	$Skeleton.play("idle")
+
+func _on_death():
+	$Skeleton.play("die")
+	await $Skeleton.animation_looped
+	
