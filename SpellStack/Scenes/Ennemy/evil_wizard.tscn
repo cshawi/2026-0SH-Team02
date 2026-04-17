@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://duhmkwc237xbw"]
 
+[ext_resource type="Script" uid="uid://qp12hj14bhn6" path="res://Script/Characters/Ennemies/evil_wizard_enemy.gd" id="1_3t4vf"]
 [ext_resource type="Texture2D" uid="uid://d2umlx0p81crq" path="res://assets/Sprites/animation/evil_wizard/Get hit.png" id="1_kd41i"]
 [ext_resource type="Texture2D" uid="uid://8hdeir41n4xa" path="res://assets/Sprites/animation/evil_wizard/Idle.png" id="1_la8sc"]
 [ext_resource type="Texture2D" uid="uid://bhcg8v366xasc" path="res://assets/Sprites/animation/evil_wizard/Death.png" id="1_vujrp"]
 [ext_resource type="Texture2D" uid="uid://bxkm6ig3v7mk4" path="res://assets/Sprites/animation/evil_wizard/Attack.png" id="4_cepgy"]
+[ext_resource type="Script" uid="uid://mafskuykreei" path="res://Script/clickeable_area.gd" id="5_owhbi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kpn57"]
 atlas = ExtResource("1_vujrp")
@@ -240,7 +242,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"die",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -254,7 +256,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"hurt",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -289,7 +291,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -333,13 +335,28 @@ animations = [{
 }],
 "loop": true,
 "name": &"new_animation",
-"speed": 5.0
+"speed": 9.0
 }]
 
-[node name="EvilWizard" type="Node2D" unique_id=263672504]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3t4vf"]
+size = Vector2(775.3673, 810.6743)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1312926631]
+[node name="EvilWizard" type="Node2D" unique_id=263672504]
+script = ExtResource("1_3t4vf")
+
+[node name="wizard" type="AnimatedSprite2D" parent="." unique_id=1312926631]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_kjijb")
 animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.030542552
 flip_h = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=442673064]
+script = ExtResource("5_owhbi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1188435775]
+position = Vector2(-3.000002, 9.536743e-07)
+rotation = -3.1415925
+scale = Vector2(0.11865346, -0.14309074)
+shape = SubResource("RectangleShape2D_3t4vf")
