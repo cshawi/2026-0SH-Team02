@@ -13,7 +13,7 @@
 | 03-27         |     | |
 | 04-03         | Congé de Pâques    |  |
 | 04-10         |     | |
-| 04-17         | combat indepth    |livrable #3 |
+| 04-17         | Cosmétique et animation    |livrable #3 |
 | 04-24         |     | |
 | 05-01         | Présentation des projets en classe (Épreuve terminale)    | Livrable #4 |
 | 05-06         | Symposium    |  |
@@ -32,9 +32,10 @@
 
 # 3. Livrable #3
 
-- Les cartes peuvent être glissé et utilisé sur un ennemi
-- Les cartes peuvent se combiner pour augmenter leur effets
-- Le joueur peut changer de terrain pour affronter une nouvelle vague d'ennemi
+- Le joueur peut changer de terrain pour affronter une nouvelle vague d'ennemis
+- Le joueur effectue une animation d'attaque
+- L'ennemi effectue une animation d'attaque
+- Le joueur peut voir sa barre de vie
 
 # 4. Livrable #4
 
