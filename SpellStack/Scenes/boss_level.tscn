@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://level_boss000001"]
+
+[ext_resource type="Texture2D" uid="uid://bg_boss_0001" path="res://assets/Sprites/Backgrounds/boss/1.png" id="1_boss"]
+[ext_resource type="Texture2D" uid="uid://bg_boss_0002" path="res://assets/Sprites/Backgrounds/boss/2.png" id="2_boss"]
+[ext_resource type="Texture2D" uid="uid://bg_boss_0003" path="res://assets/Sprites/Backgrounds/boss/3.png" id="3_boss"]
+
+[node name="Level_Boss" type="Node2D"]
+
+[node name="BG" type="Node2D" parent="."]
+
+[node name="BG_ly1" type="Sprite2D" parent="BG"]
+z_index = -6
+position = Vector2(578, 320)
+scale = Vector2(1.9982638, 1.9907408)
+texture = ExtResource("1_boss")
+
+[node name="BG_ly2" type="Sprite2D" parent="BG"]
+z_index = -5
+position = Vector2(578, 320)
+scale = Vector2(1.9982638, 1.9907408)
+texture = ExtResource("2_boss")
+
+[node name="BG_ly3" type="Sprite2D" parent="BG"]
+z_index = -4
+position = Vector2(578, 320)
+scale = Vector2(1.9982638, 1.9907408)
+texture = ExtResource("3_boss")
