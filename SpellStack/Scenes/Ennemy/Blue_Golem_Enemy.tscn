@@ -195,7 +195,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"attack",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -239,7 +239,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"death",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -256,7 +256,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"hurt",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -285,7 +285,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 9.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ypis"]
@@ -301,7 +301,6 @@ actions = Array[ExtResource("3_tal4a")]([ExtResource("4_b78cm")])
 sprite_frames = SubResource("SpriteFrames_ilc8j")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.60167223
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1084007953]

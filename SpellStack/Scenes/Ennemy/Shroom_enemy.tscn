@@ -196,7 +196,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"attack",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -246,7 +246,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"die",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -266,7 +266,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"hurt",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -292,24 +292,22 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 9.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbmdp"]
 size = Vector2(379.25568, 342.44006)
 
 [node name="ShroomEnemy" type="Node2D" unique_id=1864827885]
-scale = Vector2(3, 3)
+scale = Vector2(2.5, 2.5)
 script = ExtResource("1_cbmdp")
 stats = SubResource("Resource_8seen")
 actions = Array[ExtResource("3_rp1a3")]([ExtResource("4_08rlb")])
 
 [node name="shroom" type="AnimatedSprite2D" parent="." unique_id=1684040165]
 sprite_frames = SubResource("SpriteFrames_34ykt")
-animation = &"attack"
+animation = &"idle"
 autoplay = "idle"
-frame = 9
-frame_progress = 0.3061279
 
 [node name="Area2D" type="Area2D" parent="." unique_id=97427203]
 script = ExtResource("5_c82dr")

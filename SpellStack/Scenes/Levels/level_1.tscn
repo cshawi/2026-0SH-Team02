@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://wk1vqatvn8ec"]
 
 [ext_resource type="Script" uid="uid://bpo5bobjeupg6" path="res://Script/Levels/level_test.gd" id="1_cyadu"]
-[ext_resource type="PackedScene" uid="uid://dgxfk8cyb6vsb" path="res://Scenes/Ennemy/Shroom_enemy.tscn" id="3_iixi8"]
+[ext_resource type="PackedScene" uid="uid://dgxfk8cyb6vsb" path="res://Scenes/Ennemy/Shroom_Enemy.tscn" id="3_iixi8"]
 [ext_resource type="PackedScene" uid="uid://bk3vg4x1s8wxp" path="res://Scenes/Ennemy/Skeleton_Enemy.tscn" id="7_jv26f"]
+
 
 [node name="LevelTest" type="Node2D" unique_id=1652021035]
 script = ExtResource("1_cyadu")
