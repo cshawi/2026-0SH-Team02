@@ -10,8 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://dygy8kbo8xv75" path="res://assets/Sprites/animation/Shroom_enemy/Mushroom-Hit.png" id="4_xxwj8"]
 [ext_resource type="Script" uid="uid://mafskuykreei" path="res://Script/clickeable_area.gd" id="5_c82dr"]
 
-[sub_resource type="Resource" id="Resource_8seen"]
+[sub_resource type="Resource" id="Resource_sjghj"]
 script = ExtResource("2_qs4ym")
+current_hp = 10.0
+max_hp = 10.0
+metadata/_custom_type_script = "uid://hjwf2y36wa6m"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_33emr"]
 atlas = ExtResource("3_c82dr")
@@ -299,12 +302,13 @@ animations = [{
 size = Vector2(379.25568, 342.44006)
 
 [node name="ShroomEnemy" type="Node2D" unique_id=1864827885]
-scale = Vector2(2.5, 2.5)
+scale = Vector2(2, 2)
 script = ExtResource("1_cbmdp")
-stats = SubResource("Resource_8seen")
+stats = SubResource("Resource_sjghj")
 actions = Array[ExtResource("3_rp1a3")]([ExtResource("4_08rlb")])
 
 [node name="shroom" type="AnimatedSprite2D" parent="." unique_id=1684040165]
+position = Vector2(2.5, -18)
 sprite_frames = SubResource("SpriteFrames_34ykt")
 animation = &"idle"
 autoplay = "idle"
@@ -313,7 +317,7 @@ autoplay = "idle"
 script = ExtResource("5_c82dr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1861072585]
-position = Vector2(2.9802322e-08, 15.333333)
+position = Vector2(-0.5, -4.499996)
 rotation = -3.1415925
 scale = Vector2(0.11865346, -0.14309074)
 shape = SubResource("RectangleShape2D_cbmdp")

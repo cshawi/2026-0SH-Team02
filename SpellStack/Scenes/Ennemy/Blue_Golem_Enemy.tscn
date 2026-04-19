@@ -292,7 +292,7 @@ animations = [{
 size = Vector2(379.25568, 342.44006)
 
 [node name="BlueGolemEnemy" type="Node2D" unique_id=1954060618]
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
 script = ExtResource("1_0jk6p")
 stats = SubResource("Resource_ilc8j")
 actions = Array[ExtResource("3_tal4a")]([ExtResource("4_b78cm")])

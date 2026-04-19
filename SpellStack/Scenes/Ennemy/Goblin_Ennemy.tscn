@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://0yf2xax6t0nx"]
 
 [ext_resource type="Script" uid="uid://bbvgn0l80lphd" path="res://Script/Characters/Ennemies/goblin_enemy.gd" id="1_xwmgj"]
+[ext_resource type="Script" uid="uid://hjwf2y36wa6m" path="res://Script/Characters/Ennemies/basic_ennemi/basic_enemy_stats.gd" id="2_0prmt"]
 [ext_resource type="Texture2D" uid="uid://vwi7662glrj4" path="res://assets/Sprites/animation/Goblin/Attack.png" id="2_6827r"]
 [ext_resource type="Script" uid="uid://bf4hgb2868r4s" path="res://Script/Actions/action.gd" id="2_g7spb"]
 [ext_resource type="Script" uid="uid://d0e1la37k4yro" path="res://Script/Actions/effect.gd" id="3_0prmt"]
@@ -9,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://c10ghrgwmampg" path="res://assets/Sprites/animation/Goblin/Take Hit.png" id="4_g7spb"]
 [ext_resource type="Texture2D" uid="uid://dqk1ybq2srirp" path="res://assets/Sprites/animation/Goblin/Idle.png" id="5_0prmt"]
 [ext_resource type="Script" uid="uid://mafskuykreei" path="res://Script/clickeable_area.gd" id="6_cool0"]
+
+[sub_resource type="Resource" id="Resource_cool0"]
+script = ExtResource("2_0prmt")
 
 [sub_resource type="Resource" id="Resource_ohosb"]
 script = ExtResource("4_cool0")
@@ -187,8 +191,9 @@ animations = [{
 size = Vector2(439.09384, 392.99072)
 
 [node name="GoblinEnemy" type="Node2D" unique_id=386911349]
-scale = Vector2(2.5, 2.5)
+scale = Vector2(2, 2)
 script = ExtResource("1_xwmgj")
+stats = SubResource("Resource_cool0")
 actions = Array[ExtResource("2_g7spb")]([SubResource("Resource_cl5ki")])
 
 [node name="Goblin" type="AnimatedSprite2D" parent="." unique_id=951301524]

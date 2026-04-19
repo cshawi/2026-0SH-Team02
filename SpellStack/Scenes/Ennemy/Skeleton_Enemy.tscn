@@ -361,7 +361,7 @@ animations = [{
 size = Vector2(379.25568, 342.44006)
 
 [node name="SkeletonEnemy" type="Node2D" unique_id=1690737638]
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
 script = ExtResource("1_hbm55")
 stats = SubResource("Resource_sim5q")
 actions = Array[ExtResource("3_sim5q")]([ExtResource("4_ap85e")])
