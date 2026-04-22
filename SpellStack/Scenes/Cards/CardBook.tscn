@@ -6,11 +6,12 @@
 [ext_resource type="Script" uid="uid://dpuscenuxa6g2" path="res://Script/Cards/CardSlot.gd" id="4_2hqne"]
 [ext_resource type="PackedScene" uid="uid://b27dj55nawm6h" path="res://Scenes/Cards/Deck.tscn" id="6_1ntuw"]
 [ext_resource type="Script" uid="uid://ds18sfmyve0j6" path="res://Script/Cards/InputManager.gd" id="6_2hqne"]
+[ext_resource type="Script" uid="uid://4ut6x8y1bsqe" path="res://Script/Cards/CardDatabase.gd" id="7_2hqne"]
 
 [node name="CardBook" type="Node2D" unique_id=71926990]
 
 [node name="CardSlot" parent="." unique_id=2140216576 instance=ExtResource("3_1ntuw")]
-position = Vector2(356, 85)
+position = Vector2(290, 110)
 script = ExtResource("4_2hqne")
 
 [node name="PlayerHand" type="Node2D" parent="." unique_id=1306853877]
@@ -23,4 +24,7 @@ script = ExtResource("1_ameya")
 script = ExtResource("6_2hqne")
 
 [node name="Deck" parent="." unique_id=616228429 instance=ExtResource("6_1ntuw")]
-position = Vector2(72, 277)
+position = Vector2(148, 252)
+
+[node name="CardDatabase" type="Node" parent="." unique_id=255516890]
+script = ExtResource("7_2hqne")

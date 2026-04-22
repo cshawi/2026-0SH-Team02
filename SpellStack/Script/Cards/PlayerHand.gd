@@ -1,5 +1,6 @@
 extends Node2D
 
+class_name PlayerHand
 
 const CARD_WIDTH = 200
 const HAND_Y_POSITION = 400
@@ -13,9 +14,8 @@ var center_screen_x
 func _ready() -> void:
 	center_screen_x = get_viewport().size.x/2
 
-
-
 func add_card_to_hand(card, speed):
+	
 	if card not in player_hand:
 		player_hand.insert(0,card)
 		update_hand_position(speed)

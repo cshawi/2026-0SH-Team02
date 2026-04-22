@@ -1,23 +1,26 @@
 extends Node2D
 
+class_name CardManager
+signal card_selected(card)
+
 const COLLISION_MASK_CARD = 1
 const COLLISION_MASK_CARD_SLOT = 2
 const DEFAULT_CARD_SPEED = 0.1
 
-var card_being_dragged
+var card_being_dragged :Card
 var screen_size
-var is_hovering_on_card
-var player_hand_reference
-
+var is_hovering_on_card : bool
+@onready var player_hand_reference = $"../PlayerHand"
+@onready var InputManager = $"../InputManager"
 
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
-	player_hand_reference = $"../PlayerHand"
-	$"../InputManager".connect("left_mouse_button_released", on_left_click_released)
+	InputManager.connect("left_mouse_button_released", on_left_click_released)
 
 func connect_card_signals(card):
 	card.connect("hovered",on_hovered_over_card)
 	card.connect("hovered_off",on_hovered_off_card)
+	card.connect("card_selected", on_card_selected)
 
 func on_hovered_over_card(card):
 	if !is_hovering_on_card:
@@ -36,6 +39,9 @@ func on_hovered_off_card(card):
 	
 	
 func highlight_card(card,hovered):
+	if not card is Card:
+		return
+	
 	if hovered:
 		card.scale = Vector2(1.1,1.1)
 		card.z_index = 2
@@ -50,12 +56,16 @@ func _process(delta: float) -> void:
 		card_being_dragged.position = Vector2(clamp(mouse_pos.x,0,screen_size.x),clamp(mouse_pos.y,0,screen_size.y))
 
 
+
 func on_left_click_released():
 	if card_being_dragged:
 		end_drag()
 
 
 func start_drag(card):
+	if not card is Card:
+		return
+	
 	card_being_dragged = card
 	card.scale = Vector2(1,1)
 	
@@ -105,3 +115,7 @@ func get_card_with_highest_z_index(cards):
 			highest_z_card = current_card
 			highest_z_index = current_card.z_index
 	return highest_z_card
+
+func on_card_selected(card : Card):
+	emit_signal("card_selected", card)
+	
