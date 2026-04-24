@@ -3,6 +3,7 @@ extends Ennemi
 # class parent qui fera juste le tour des actions principales
 #chaque ennemi va heriter de Ennemi
 class_name BlueGolem
+@onready var SoundController: Node = $"../SoundManager"
 
 func _ready() -> void:
 	stats_path = "res://Resources/Stats/BlueGolem.tres"
@@ -18,4 +19,6 @@ func _attack():
 	
 func _on_death():
 	$Blue_Golem.play("death")
+	SoundManager.dead_golem()
 	await $Blue_Golem.animation_looped
+	

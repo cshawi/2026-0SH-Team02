@@ -18,4 +18,5 @@ func _attack():
 
 func _on_death():
 	$shroom.play("die")
+	SoundManager.dead_mushroom()
 	await $shroom.animation_looped

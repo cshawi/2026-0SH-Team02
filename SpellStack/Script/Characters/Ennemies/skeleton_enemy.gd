@@ -18,5 +18,6 @@ func _attack():
 
 func _on_death():
 	$Skeleton.play("die")
+	SoundManager.dead_skeleton()
 	await $Skeleton.animation_looped
 	

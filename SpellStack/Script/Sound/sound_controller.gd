@@ -16,10 +16,21 @@ func play_game_over():
 		$Music.stop()
 		$GameOver.play()
 
-func dead_skeleton():
+func dead_skeleton() -> void :
 	if not muted:
-		$SkeletonGettingHit.play()
+		$SkeletonDeath.play()
 		
 func dead_Witch():
 	if not muted:
 		$DeadWitch.play()
+		
+func dead_golem():
+	if not muted:
+		$GolemDeath.play()
+
+func dead_demon():
+	if not muted:
+		$FlyingDemonDeath.play()
+func dead_mushroom():
+	if not muted:
+		$DeadShroom.play()

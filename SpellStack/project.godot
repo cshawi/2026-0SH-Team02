@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.6")
 
 Events="*uid://cpy6c6jxm5abe"
 TargetManagerSingleton="*uid://by31orlqjxgpy"
+SoundManager="*uid://ce3y8pf07s6am"
 
 [input]
 
