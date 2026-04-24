@@ -17,7 +17,7 @@ func _ready() -> void:
 func add_card_to_hand(card, speed):
 	
 	if card not in player_hand:
-		player_hand.insert(0,card)
+		player_hand.append(card)
 		update_hand_position(speed)
 	else:
 		animate_card_to_position(card,card.hand_position,speed)
@@ -46,3 +46,10 @@ func remove_card_from_hand(card):
 	if card in player_hand:
 		player_hand.erase(card)
 		update_hand_position(DEFAULT_CARD_SPEED)
+		#card.queue_free() # ou discard
+		
+func delete_card_from_hand(card):
+	if card in player_hand:
+		player_hand.erase(card)
+		#update_hand_position(DEFAULT_CARD_SPEED)
+		card.queue_free()

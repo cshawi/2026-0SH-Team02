@@ -36,6 +36,9 @@ func perform_action(action, enemy) -> void:
 	
 	if(self is Player):
 		action.play(self, enemy) 
+		print(self.playerDeck.playerHand)
+		self.playerDeck.playerHand.remove_card_from_hand(action)
+		print(self.playerDeck.playerHand)
 	else:
 		action.execute(self, enemy)  # Execute the of reguar entity with no cards
 
