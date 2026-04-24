@@ -1,3 +1,31 @@
 [gd_scene format=3 uid="uid://ce3y8pf07s6am"]
 
+[ext_resource type="Script" uid="uid://bhlsoie4du13" path="res://Script/Sound/sound_controller.gd" id="1_mef1d"]
+[ext_resource type="AudioStream" uid="uid://dmpbbvyb4slvv" path="res://assets/SFX/Music/WinSound.wav" id="2_uq052"]
+[ext_resource type="AudioStream" uid="uid://bwnmpcqgi5vr" path="res://assets/SFX/Music/fireflies-gerald-olivieri-main-version-35371-02-17.mp3" id="3_rr1rk"]
+[ext_resource type="AudioStream" uid="uid://ddyk6jqsy08sd" path="res://assets/SFX/Music/GameOver.wav" id="4_4lw58"]
+[ext_resource type="AudioStream" uid="uid://w8ghvk6d7nf1" path="res://assets/SFX/EnnemyFX/SkeletonHit.wav" id="4_uq052"]
+[ext_resource type="AudioStream" uid="uid://bdyshiwf5x0q1" path="res://assets/SFX/EnnemyFX/WitchScream.wav" id="5_rr1rk"]
+
 [node name="SoundManager" type="Node" unique_id=1437602414]
+script = ExtResource("1_mef1d")
+
+[node name="Win" type="AudioStreamPlayer" parent="." unique_id=2006877412]
+stream = ExtResource("2_uq052")
+volume_db = -17.495
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1333762651]
+stream = ExtResource("3_rr1rk")
+volume_db = -10.401
+
+[node name="GameOver" type="AudioStreamPlayer" parent="." unique_id=1859010081]
+stream = ExtResource("4_4lw58")
+
+[node name="SkeletonGettingHit" type="AudioStreamPlayer" parent="." unique_id=1009947614]
+stream = ExtResource("4_uq052")
+volume_db = -3.755
+
+[node name="DeadWitch" type="AudioStreamPlayer" parent="." unique_id=1627818962]
+stream = ExtResource("5_rr1rk")
+volume_db = -12.86
+pitch_scale = 0.59
