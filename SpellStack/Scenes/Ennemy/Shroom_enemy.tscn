@@ -139,17 +139,33 @@ region = Rect2(320, 0, 80, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_qs4ym"]
 atlas = ExtResource("1_wq370")
 region = Rect2(0, 0, 80, 64)
+region = Rect2(0, 0, 80, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rp1a3"]
 atlas = ExtResource("1_wq370")
+region = Rect2(80, 0, 80, 64)
 region = Rect2(80, 0, 80, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_08rlb"]
 atlas = ExtResource("1_wq370")
 region = Rect2(160, 0, 80, 64)
+region = Rect2(160, 0, 80, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8seen"]
 atlas = ExtResource("1_wq370")
+region = Rect2(240, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34ykt"]
+atlas = ExtResource("1_wq370")
+region = Rect2(320, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhsrn"]
+atlas = ExtResource("1_wq370")
+region = Rect2(400, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pndws"]
+atlas = ExtResource("1_wq370")
+region = Rect2(480, 0, 80, 64)
 region = Rect2(240, 0, 80, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_34ykt"]
@@ -292,6 +308,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pndws")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34ykt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhsrn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pndws")
 }],
 "loop": true,
 "name": &"idle",
@@ -315,6 +340,8 @@ autoplay = "idle"
 frame_progress = 0.24793276
 
 [node name="Area2D" type="Area2D" parent="." unique_id=97427203]
+collision_layer = 8
+collision_mask = 8
 script = ExtResource("5_c82dr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1861072585]

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://d24dl4m04ally"]
+
+[ext_resource type="Resource" uid="uid://bs6bph8c5fam1" path="res://Resources/actions_cards/actions/playerActions/greatDouble.tres" id="1_16fq6"]
+[ext_resource type="Script" uid="uid://13ubg5o3y64n" path="res://Script/Cards/CardData.gd" id="1_wuhrr"]
+[ext_resource type="Texture2D" uid="uid://dkbqs8e4e3wpa" path="res://assets/Sprites/Cards/SplashCard.png" id="2_q4dmn"]
+
+[resource]
+script = ExtResource("1_wuhrr")
+name = "WaterBall"
+texture = ExtResource("2_q4dmn")
+action = ExtResource("1_16fq6")
+cost = 1
+description = "tata"
+metadata/_custom_type_script = "uid://4ut6x8y1bsqe"

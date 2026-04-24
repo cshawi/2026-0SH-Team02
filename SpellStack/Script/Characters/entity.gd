@@ -30,17 +30,23 @@ func perform_action(action, enemy) -> void:
 		return
 	
 	if action == null:
-		print("ERROR: action null")
+		print("ERROR: action ou carte null")
 		end_turn()  # End turn if no action provided
 		return
 	
-	action.execute(self, enemy)  # Execute the action
-	
-	# Ensure that action execution was successful
-	print("Action executed, checking for completion...")
-	if action.is_action_successful(action,enemy):  # Implement this method based on your action outcome
-		print("Action was successful")
+	if(self is Player):
+		action.play(self, enemy) 
+		print(self.playerDeck.playerHand)
+		self.playerDeck.playerHand.remove_card_from_hand(action)
+		print(self.playerDeck.playerHand)
 	else:
-		print("Action failed, ending turn.")
+		action.execute(self, enemy)  # Execute the of reguar entity with no cards
+
+	# Ensure that action execution was successful
+	#print("Action executed, checking for completion...")
+	#if action.is_action_successful(action,enemy):  # Implement this method based on your action outcome
+		#print("Action was successful")
+	#else:
+		#print("Action failed, ending turn.")
 	
 	end_turn()  # End turn properly after action

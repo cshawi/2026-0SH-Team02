@@ -15,6 +15,7 @@
 [ext_resource type="Resource" uid="uid://bs6bph8c5fam1" path="res://Resources/actions_cards/actions/playerActions/greatDouble.tres" id="9_hibaj"]
 [ext_resource type="PackedScene" uid="uid://cawo3r0hanyyq" path="res://Scenes/Managers/battle_manager.tscn" id="10_hptm8"]
 [ext_resource type="Resource" uid="uid://cixtxot8kvyab" path="res://Resources/actions_cards/actions/playerActions/simpleSpell.tres" id="17_b3802"]
+[ext_resource type="PackedScene" uid="uid://cqci2e53ng5yn" path="res://Scenes/Cards/CardBook.tscn" id="17_fevyy"]
 [ext_resource type="PackedScene" uid="uid://c6tsxoi567laa" path="res://Scenes/Managers/target_manager.tscn" id="17_h1bgf"]
 
 [node name="Main" type="Node2D" unique_id=179179789]
@@ -66,3 +67,5 @@ position = Vector2(317, 474)
 action_ui = NodePath("../UI/PlayerAction")
 target_manager = NodePath("../Managers/TargetManager")
 actions = Array[ExtResource("9_fevyy")]([ExtResource("9_hibaj"), ExtResource("17_b3802")])
+
+[node name="CardBook" parent="." unique_id=71926990 instance=ExtResource("17_fevyy")]
