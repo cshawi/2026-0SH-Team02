@@ -7,7 +7,7 @@ const CARD_DRAW_SPEED = 0.1
 const DECK_SIZE =2
 
 #ici mettre action + modif references 
-var player_starting_deck : Array = ["fireball","waterball"] 
+var player_starting_deck : Array = ["fireball","waterball","arcana"] 
 var current_deck : Array =[]
 #var player_deck : Array = ["Fireball","AcidSpray","Splash","Zap" ]
 var player_deck : Array = [] #get selon les names dans le database
@@ -45,17 +45,12 @@ func draw_card():
 		var card_data = cardDatabase.get_card(card_drawn_name)
 		var new_card = card_scene.instantiate()
 		
-		new_card.get_node("CardImage").texture = card_data.texture
-		new_card.action = card_data.action.duplicate() # important
 		cardManager.add_child(new_card)
-		new_card.name = card_data.name
+		new_card.initData(card_data)
 		
 		playerHand.add_card_to_hand(new_card,CARD_DRAW_SPEED)
-		print("Carte instanciée:", new_card.name, "| position:", new_card.position, "| visible:", new_card.visible)
 		
-#func delete_hand():
-	#for card in playerHand.player_hand.duplicate(true):
-		#playerHand.delete_card_from_hand(card)
+		
 		
 func delete_hand():
 	for card in cardManager.get_children():
@@ -69,7 +64,7 @@ func refill_card():
 	player_deck = player_starting_deck.duplicate(true)
 	
 func draw_pile():
-	
+	player_deck.shuffle()
 	for i in range(DECK_SIZE):
 		draw_card()
 	

@@ -70,10 +70,10 @@ func _on_target_selected(enemy):
 	#playerDeck.delete_hand()
 func start_turn():
 	print("=== PLAYER START_TURN APPELÉ ===")
-	super.start_turn()
 	selected_card = null
 	playerDeck.refill_card()
 	playerDeck.draw_pile()
+	super.start_turn()
 
 
 func end_turn():
