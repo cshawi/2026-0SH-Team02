@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dsuyku6fdqoo7" path="res://Scenes/player_action.tscn" id="3_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://basd3ouwrxfvs" path="res://Scenes/player.tscn" id="3_kry3j"]
 [ext_resource type="PackedScene" uid="uid://d0ksjfmfp51ru" path="res://Scenes/game_over.tscn" id="4_pdsj5"]
+[ext_resource type="Script" uid="uid://bsr4i1ueyikxv" path="res://Script/Menus/game_over.gd" id="5_b3802"]
 [ext_resource type="PackedScene" uid="uid://c4y3b5cy4g1u0" path="res://Scenes/win_ui.tscn" id="5_ee4r6"]
 [ext_resource type="PackedScene" uid="uid://do0ag68tn1kbd" path="res://Scenes/Managers/scene_manager.tscn" id="6_344ge"]
 [ext_resource type="PackedScene" uid="uid://d1jod866rvsct" path="res://Scenes/menu_pause.tscn" id="6_h1bgf"]
@@ -36,6 +37,7 @@ mouse_filter = 2
 
 [node name="GameOver" parent="UI" unique_id=1497448323 instance=ExtResource("4_pdsj5")]
 visible = false
+script = ExtResource("5_b3802")
 
 [node name="WinUi" parent="UI" unique_id=2061302318 instance=ExtResource("5_ee4r6")]
 visible = false

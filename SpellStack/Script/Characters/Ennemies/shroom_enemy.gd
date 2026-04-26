@@ -5,7 +5,7 @@ extends Ennemi
 class_name Shroom
 
 func _ready() -> void:
-	stats_path = "res://Resources/Stats/shroom.tres"
+	stats_path = "res://Resources/Stats/death_ennemy.tres"
 	stats = load(stats_path).duplicate(true)
 	if stats == null:
 		print("stats null chemin invalid pour "  , self )

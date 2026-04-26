@@ -22,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.84523153, 0.00064649223, 0.86024624, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="." unique_id=771720514]
 layout_mode = 1
@@ -38,3 +38,23 @@ theme_override_fonts/font = ExtResource("1_ojehl")
 text = "Game over"
 label_settings = SubResource("LabelSettings_8fo1c")
 horizontal_alignment = 1
+
+[node name="CenterContainer2" type="CenterContainer" parent="." unique_id=53023427]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -153.0
+offset_top = -40.0
+offset_right = 153.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="instructions" type="Label" parent="CenterContainer2" unique_id=812222349]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ojehl")
+theme_override_font_sizes/font_size = 27
+text = "Press space to return to the main Menu"

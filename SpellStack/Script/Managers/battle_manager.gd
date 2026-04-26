@@ -123,7 +123,7 @@ func pv_verif():
 		print("Le player est mort!")
 		#get_tree().paused = true
 		#game_over_ui.visible = true
-		Game_Manager.Next_Level()
+		Game_Manager.player_death()
 		character_list.clear()
 		turn_order.clear()
 	elif(character_list.has(player_character) && character_list.size() == 1):
