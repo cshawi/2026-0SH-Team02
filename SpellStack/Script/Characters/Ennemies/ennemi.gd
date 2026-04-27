@@ -9,12 +9,26 @@ var stats_path: String = ""
 @export var stats : Basic_enemy_stats
 @onready var click_area = $Area2D
 
+@onready var health_bar = preload("res://Scenes/ennemy_health_bar.tscn").instantiate()
+var max_health : int
+var health : int
+
 signal clicked(enemy)
 
 func _ready() -> void:
 	add_to_group("enemies")
 	print("enemy ready")
 	click_area.clicked.connect(_on_clicked)
+	_create_health_bar()
+
+func _create_health_bar():
+	add_child(health_bar)
+	health_bar.position = Vector2(-25, -30)
+	
+	max_health = stats.max_hp
+	health = stats.current_hp
+	
+	health_bar.update(health, max_health)
 
 func start_turn():
 	if(turn_state ==Turn_state.WAITING):
@@ -59,7 +73,13 @@ func _on_clicked():
 		clicked.emit(self)
 
 func _attack():
+	#fonction virtuelle qui sert de template à chaque ennemi pour jouer son animation d'attaque
 	pass
 
 func _on_death():
+	#fonction virtuelle qui sert de template à chaque ennemi pour jouer son animation de mort
 	pass
+
+func update_hp_bar(damage:int):
+	health -= damage
+	health_bar.update(health, max_health)

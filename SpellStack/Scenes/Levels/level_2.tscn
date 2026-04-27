@@ -9,7 +9,7 @@ script = ExtResource("1_7qxk6")
 
 [node name="BlueGolemEnemy" parent="." unique_id=1954060618 instance=ExtResource("2_ucdhh")]
 position = Vector2(753, 399)
-scale = Vector2(4, 4)
+scale = Vector2(3, 3)
 
 [node name="Level_Crypt" parent="." unique_id=1951452275 instance=ExtResource("3_oylv5")]
 metadata/_edit_lock_ = true

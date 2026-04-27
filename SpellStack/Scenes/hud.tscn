@@ -18,3 +18,4 @@ anchor_bottom = 0.0
 offset_right = 280.0
 offset_bottom = 40.0
 grow_horizontal = 1
+grow_vertical = 1

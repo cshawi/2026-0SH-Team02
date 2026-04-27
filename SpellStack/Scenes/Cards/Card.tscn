@@ -2,9 +2,16 @@
 
 [ext_resource type="Script" uid="uid://cuh6ikrn4kkft" path="res://Script/Cards/Card.gd" id="1_3p273"]
 [ext_resource type="Texture2D" uid="uid://uvsjod2xdpye" path="res://assets/Sprites/Cards/FireBallCard.png" id="1_pnb5n"]
+[ext_resource type="FontFile" uid="uid://clnuk6ynow73o" path="res://assets/Fonts/DurendalAndOliphantRegular-LVwL4.ttf" id="3_58ae4"]
+[ext_resource type="LabelSettings" uid="uid://bat1x4b06jxpe" path="res://assets/Sprites/Cards/cardLabelSettings/cost.tres" id="3_rd7hj"]
+[ext_resource type="LabelSettings" uid="uid://3dkjdmlcp6wb" path="res://assets/Sprites/Cards/cardLabelSettings/nomCarte.tres" id="4_rd7hj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3p273"]
-size = Vector2(123, 190)
+size = Vector2(130, 208)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7mr5f"]
+font = ExtResource("3_58ae4")
+font_size = 12
 
 [node name="Card" type="Node2D" unique_id=1107710642]
 script = ExtResource("1_3p273")
@@ -13,15 +20,51 @@ script = ExtResource("1_3p273")
 z_index = -1
 
 [node name="CardImage" type="Sprite2D" parent="." unique_id=335361667]
-position = Vector2(-5, -1.9999924)
 scale = Vector2(0.16666663, 0.18380953)
 texture = ExtResource("1_pnb5n")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=612419639]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1507836272]
-position = Vector2(-5.5, -2)
 shape = SubResource("RectangleShape2D_3p273")
 
+[node name="Control" type="Control" parent="." unique_id=740823846]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Nom" type="Label" parent="Control" unique_id=836557618]
+layout_mode = 0
+offset_left = -53.0
+offset_top = -98.0
+offset_right = 13.0
+offset_bottom = -87.0
+text = "Feu"
+label_settings = ExtResource("4_rd7hj")
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="Control" unique_id=1337634251]
+layout_mode = 0
+offset_left = -55.0
+offset_top = 47.0
+offset_right = 57.0
+offset_bottom = 85.0
+text = "ssfdsf"
+label_settings = SubResource("LabelSettings_7mr5f")
+autowrap_mode = 3
+
+[node name="Cost" type="Label" parent="Control" unique_id=1314261853]
+layout_mode = 0
+offset_left = 42.0
+offset_top = -102.0
+offset_right = 59.0
+offset_bottom = -81.0
+text = "1"
+label_settings = ExtResource("3_rd7hj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

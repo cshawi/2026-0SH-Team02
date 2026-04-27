@@ -1,15 +1,22 @@
 [gd_scene format=3 uid="uid://wk1vqatvn8ec"]
 
 [ext_resource type="Script" uid="uid://b5pex0g53on5g" path="res://Script/Levels/level_1.gd" id="1_iixi8"]
+[ext_resource type="Script" uid="uid://hjwf2y36wa6m" path="res://Script/Characters/Ennemies/basic_ennemi/basic_enemy_stats.gd" id="3_cyadu"]
 [ext_resource type="PackedScene" uid="uid://dgxfk8cyb6vsb" path="res://Scenes/Ennemy/Shroom_enemy.tscn" id="3_iixi8"]
 [ext_resource type="PackedScene" path="res://Scenes/dungeon_level.tscn" id="4_iixi8"]
 [ext_resource type="PackedScene" uid="uid://bk3vg4x1s8wxp" path="res://Scenes/Ennemy/Skeleton_Enemy.tscn" id="7_jv26f"]
+
+[sub_resource type="Resource" id="Resource_xgxfi"]
+script = ExtResource("3_cyadu")
+current_hp = 10.0
+metadata/_custom_type_script = "uid://hjwf2y36wa6m"
 
 [node name="Level_1" type="Node2D" unique_id=1652021035]
 script = ExtResource("1_iixi8")
 
 [node name="ShroomEnemy" parent="." unique_id=1864827885 instance=ExtResource("3_iixi8")]
 position = Vector2(865, 390)
+stats = SubResource("Resource_xgxfi")
 
 [node name="SkeletonEnemy" parent="." unique_id=1690737638 instance=ExtResource("7_jv26f")]
 position = Vector2(668.00006, 519)

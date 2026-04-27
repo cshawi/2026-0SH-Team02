@@ -2,10 +2,17 @@
 
 [ext_resource type="Script" uid="uid://b1qmncnwcfpnu" path="res://Script/Characters/Ennemies/orange_golem_enemy.gd" id="1_c6adq"]
 [ext_resource type="Texture2D" uid="uid://ko5lxxliivb7" path="res://assets/Sprites/animation/Orange_Golem_Enemy/Golem_1_attack.png" id="2_6uhtt"]
+[ext_resource type="Script" uid="uid://hjwf2y36wa6m" path="res://Script/Characters/Ennemies/basic_ennemi/basic_enemy_stats.gd" id="2_leov8"]
 [ext_resource type="Texture2D" uid="uid://qxamm4t1nv22" path="res://assets/Sprites/animation/Orange_Golem_Enemy/Golem_1_die.png" id="3_mqag2"]
 [ext_resource type="Texture2D" uid="uid://ciq7na1ib7gmq" path="res://assets/Sprites/animation/Orange_Golem_Enemy/Golem_1_hurt.png" id="4_jukmp"]
 [ext_resource type="Texture2D" uid="uid://cki66tidaegw1" path="res://assets/Sprites/animation/Orange_Golem_Enemy/Golem_1_idle.png" id="5_0tr8w"]
 [ext_resource type="Script" uid="uid://mafskuykreei" path="res://Script/clickeable_area.gd" id="6_jvtav"]
+
+[sub_resource type="Resource" id="Resource_0eafb"]
+script = ExtResource("2_leov8")
+current_hp = 40.0
+max_hp = 40.0
+metadata/_custom_type_script = "uid://hjwf2y36wa6m"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hfvwa"]
 atlas = ExtResource("2_6uhtt")
@@ -288,6 +295,7 @@ size = Vector2(379.25568, 342.44006)
 [node name="OrangeGolemEnemy" type="Node2D" unique_id=1368799295]
 scale = Vector2(2, 2)
 script = ExtResource("1_c6adq")
+stats = SubResource("Resource_0eafb")
 
 [node name="Orange_Golem" type="AnimatedSprite2D" parent="." unique_id=1339620110]
 scale = Vector2(2.5, 2.5)
@@ -298,6 +306,8 @@ flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=458275223]
 scale = Vector2(2.5, 2.5)
+collision_layer = 8
+collision_mask = 8
 script = ExtResource("6_jvtav")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1074388085]

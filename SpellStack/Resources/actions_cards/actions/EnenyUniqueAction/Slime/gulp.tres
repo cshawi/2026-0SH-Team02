@@ -4,12 +4,12 @@
 [ext_resource type="Script" uid="uid://bf4hgb2868r4s" path="res://Script/Actions/action.gd" id="2_5jalx"]
 [ext_resource type="Script" uid="uid://3t676henkg37" path="res://Script/Actions/heal.gd" id="2_lawsa"]
 
-[sub_resource type="Resource" id="Resource_uivr7"]
+[sub_resource type="Resource" id="Resource_5jalx"]
 script = ExtResource("2_lawsa")
 amount = 18
 
 [resource]
 script = ExtResource("2_5jalx")
 name = "Gulp"
-effects = Array[ExtResource("1_pnq3a")]([SubResource("Resource_uivr7")])
+effects = Array[ExtResource("1_pnq3a")]([SubResource("Resource_5jalx")])
 metadata/_custom_type_script = "uid://bf4hgb2868r4s"

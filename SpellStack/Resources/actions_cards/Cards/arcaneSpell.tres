@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bmg1sic4vxm8m"]
+
+[ext_resource type="Script" uid="uid://13ubg5o3y64n" path="res://Script/Cards/CardData.gd" id="1_58y8i"]
+[ext_resource type="Resource" uid="uid://c4d8v4ax58bok" path="res://Resources/actions_cards/actions/EnenyUniqueAction/Slime/gulp.tres" id="1_b05hn"]
+[ext_resource type="Texture2D" uid="uid://dh6bptq6auntf" path="res://assets/Sprites/Cards/Arcane_Base.png" id="5_is03j"]
+
+[resource]
+script = ExtResource("1_58y8i")
+name = "arcana"
+texture = ExtResource("5_is03j")
+action = ExtResource("1_b05hn")
+cost = 1
+description = "Attack for 18 damages"
+metadata/_custom_type_script = "uid://13ubg5o3y64n"

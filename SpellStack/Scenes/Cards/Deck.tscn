@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b27dj55nawm6h"]
+
+[ext_resource type="Texture2D" uid="uid://be5c2p5qmlfyx" path="res://assets/Sprites/Cards/Deck.png" id="1_bpcpi"]
+[ext_resource type="Script" uid="uid://dx0033akwxwkk" path="res://Script/Cards/Deck.gd" id="2_e8dky"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eb2m5"]
+size = Vector2(46, 50)
+
+[node name="Deck" type="Node2D" unique_id=616228429]
+z_index = -1
+script = ExtResource("2_e8dky")
+
+[node name="DeckImage" type="Sprite2D" parent="." unique_id=591664949]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_bpcpi")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=115233117]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1075052355]
+shape = SubResource("RectangleShape2D_eb2m5")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1479633756]
+offset_left = -23.0
+offset_top = -25.0
+offset_right = 17.0
+offset_bottom = 15.0
+scale = Vector2(0.5, 0.5)
+text = "0"

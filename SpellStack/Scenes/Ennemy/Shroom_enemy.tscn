@@ -10,8 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://dygy8kbo8xv75" path="res://assets/Sprites/animation/Shroom_enemy/Mushroom-Hit.png" id="4_xxwj8"]
 [ext_resource type="Script" uid="uid://mafskuykreei" path="res://Script/clickeable_area.gd" id="5_c82dr"]
 
-[sub_resource type="Resource" id="Resource_8seen"]
+[sub_resource type="Resource" id="Resource_sjghj"]
 script = ExtResource("2_qs4ym")
+current_hp = 10.0
+max_hp = 10.0
+metadata/_custom_type_script = "uid://hjwf2y36wa6m"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_33emr"]
 atlas = ExtResource("3_c82dr")
@@ -133,33 +136,49 @@ region = Rect2(240, 0, 80, 64)
 atlas = ExtResource("4_xxwj8")
 region = Rect2(320, 0, 80, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cbmdp"]
-atlas = ExtResource("1_wq370")
-region = Rect2(3, 0, 79, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_so57q"]
-atlas = ExtResource("1_wq370")
-region = Rect2(82, 0, 79, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_202x0"]
-atlas = ExtResource("1_wq370")
-region = Rect2(161, 0, 79, 64)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_qs4ym"]
 atlas = ExtResource("1_wq370")
-region = Rect2(240, 0, 79, 64)
+region = Rect2(0, 0, 80, 64)
+region = Rect2(0, 0, 80, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rp1a3"]
 atlas = ExtResource("1_wq370")
-region = Rect2(319, 0, 79, 64)
+region = Rect2(80, 0, 80, 64)
+region = Rect2(80, 0, 80, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_08rlb"]
 atlas = ExtResource("1_wq370")
-region = Rect2(398, 0, 79, 64)
+region = Rect2(160, 0, 80, 64)
+region = Rect2(160, 0, 80, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8seen"]
 atlas = ExtResource("1_wq370")
-region = Rect2(477, 0, 79, 64)
+region = Rect2(240, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34ykt"]
+atlas = ExtResource("1_wq370")
+region = Rect2(320, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhsrn"]
+atlas = ExtResource("1_wq370")
+region = Rect2(400, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pndws"]
+atlas = ExtResource("1_wq370")
+region = Rect2(480, 0, 80, 64)
+region = Rect2(240, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34ykt"]
+atlas = ExtResource("1_wq370")
+region = Rect2(320, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhsrn"]
+atlas = ExtResource("1_wq370")
+region = Rect2(400, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pndws"]
+atlas = ExtResource("1_wq370")
+region = Rect2(480, 0, 80, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34ykt"]
 animations = [{
@@ -270,15 +289,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cbmdp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_so57q")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_202x0")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_qs4ym")
 }, {
 "duration": 1.0,
@@ -289,6 +299,24 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8seen")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34ykt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhsrn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pndws")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34ykt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhsrn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pndws")
 }],
 "loop": true,
 "name": &"idle",
@@ -299,21 +327,25 @@ animations = [{
 size = Vector2(379.25568, 342.44006)
 
 [node name="ShroomEnemy" type="Node2D" unique_id=1864827885]
-scale = Vector2(2.5, 2.5)
+scale = Vector2(2, 2)
 script = ExtResource("1_cbmdp")
-stats = SubResource("Resource_8seen")
+stats = SubResource("Resource_sjghj")
 actions = Array[ExtResource("3_rp1a3")]([ExtResource("4_08rlb")])
 
 [node name="shroom" type="AnimatedSprite2D" parent="." unique_id=1684040165]
+position = Vector2(2.5, -18)
 sprite_frames = SubResource("SpriteFrames_34ykt")
 animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.24793276
 
 [node name="Area2D" type="Area2D" parent="." unique_id=97427203]
+collision_layer = 8
+collision_mask = 8
 script = ExtResource("5_c82dr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1861072585]
-position = Vector2(2.9802322e-08, 15.333333)
+position = Vector2(-0.5, -4.499996)
 rotation = -3.1415925
 scale = Vector2(0.11865346, -0.14309074)
 shape = SubResource("RectangleShape2D_cbmdp")

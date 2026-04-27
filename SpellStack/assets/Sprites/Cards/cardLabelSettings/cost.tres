@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://bat1x4b06jxpe"]
+
+[ext_resource type="FontFile" uid="uid://clnuk6ynow73o" path="res://assets/Fonts/DurendalAndOliphantRegular-LVwL4.ttf" id="1_7ls8h"]
+
+[resource]
+line_spacing = 1.0
+font = ExtResource("1_7ls8h")

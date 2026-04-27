@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bsh0xjq1uf4yr"]
+
+[ext_resource type="Resource" uid="uid://cixtxot8kvyab" path="res://Resources/actions_cards/actions/playerActions/simpleSpell.tres" id="1_sjn1e"]
+[ext_resource type="Script" uid="uid://13ubg5o3y64n" path="res://Script/Cards/CardData.gd" id="2_sjn1e"]
+[ext_resource type="Texture2D" uid="uid://uvsjod2xdpye" path="res://assets/Sprites/Cards/FireBallCard.png" id="3_woo14"]
+
+[resource]
+script = ExtResource("2_sjn1e")
+name = "FireBall"
+texture = ExtResource("3_woo14")
+action = ExtResource("1_sjn1e")
+cost = 1
+description = "blabla"
+metadata/_custom_type_script = "uid://4ut6x8y1bsqe"

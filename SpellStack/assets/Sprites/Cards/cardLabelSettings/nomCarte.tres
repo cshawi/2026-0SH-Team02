@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://3dkjdmlcp6wb"]
+
+[ext_resource type="FontFile" uid="uid://clnuk6ynow73o" path="res://assets/Fonts/DurendalAndOliphantRegular-LVwL4.ttf" id="1_ifrgc"]
+
+[resource]
+font = ExtResource("1_ifrgc")
+font_size = 10

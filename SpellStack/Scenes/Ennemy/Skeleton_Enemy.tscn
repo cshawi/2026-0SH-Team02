@@ -361,7 +361,7 @@ animations = [{
 size = Vector2(379.25568, 342.44006)
 
 [node name="SkeletonEnemy" type="Node2D" unique_id=1690737638]
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
 script = ExtResource("1_hbm55")
 stats = SubResource("Resource_sim5q")
 actions = Array[ExtResource("3_sim5q")]([ExtResource("4_ap85e")])
@@ -373,6 +373,8 @@ autoplay = "idle"
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1500648111]
+collision_layer = 8
+collision_mask = 8
 script = ExtResource("6_onqtm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=310612510]

@@ -2,10 +2,13 @@
 
 [ext_resource type="Script" uid="uid://d0e1la37k4yro" path="res://Script/Actions/effect.gd" id="1_pu0ol"]
 [ext_resource type="Script" uid="uid://bf4hgb2868r4s" path="res://Script/Actions/action.gd" id="2_c51ib"]
-[ext_resource type="Resource" uid="uid://b4ukfqskxnemf" path="res://Resources/actions_cards/effects/damage.tres" id="2_m1p6l"]
+[ext_resource type="Script" uid="uid://u3xi8iewjuvo" path="res://Script/Actions/damage.gd" id="2_m1p6l"]
+
+[sub_resource type="Resource" id="Resource_3ene5"]
+script = ExtResource("2_m1p6l")
 
 [resource]
 script = ExtResource("2_c51ib")
 name = "Bump"
-effects = Array[ExtResource("1_pu0ol")]([ExtResource("2_m1p6l")])
+effects = Array[ExtResource("1_pu0ol")]([SubResource("Resource_3ene5")])
 metadata/_custom_type_script = "uid://bf4hgb2868r4s"

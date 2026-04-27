@@ -1,8 +1,9 @@
 extends Node2D
 
+class_name PlayerHand
 
 const CARD_WIDTH = 200
-const HAND_Y_POSITION = 819
+const HAND_Y_POSITION = 400
 const DEFAULT_CARD_SPEED = 0.1
 
 var player_hand = []
@@ -13,11 +14,10 @@ var center_screen_x
 func _ready() -> void:
 	center_screen_x = get_viewport().size.x/2
 
-
-
 func add_card_to_hand(card, speed):
+	
 	if card not in player_hand:
-		player_hand.insert(0,card)
+		player_hand.append(card)
 		update_hand_position(speed)
 	else:
 		animate_card_to_position(card,card.hand_position,speed)
@@ -46,3 +46,10 @@ func remove_card_from_hand(card):
 	if card in player_hand:
 		player_hand.erase(card)
 		update_hand_position(DEFAULT_CARD_SPEED)
+		#card.queue_free() # ou discard
+		
+func delete_card_from_hand(card):
+	if card in player_hand:
+		player_hand.erase(card)
+		#update_hand_position(DEFAULT_CARD_SPEED)
+		card.queue_free()

@@ -6,12 +6,12 @@ signal left_mouse_button_released
 const COLLISION_MASK_CARD = 1
 const COLLISION_MASK_DECK = 4
 
-var card_manager_reference
-var deck_reference
+@onready var card_manager_reference =$"../CardManager"
+@onready var deck_reference = $"../Deck"
 
 func _ready() -> void:
-	card_manager_reference = $"../CardManager"
-	deck_reference = $"../Deck"
+	pass
+	
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:

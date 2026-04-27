@@ -4,8 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://d2umlx0p81crq" path="res://assets/Sprites/animation/evil_wizard/Get hit.png" id="1_kd41i"]
 [ext_resource type="Texture2D" uid="uid://8hdeir41n4xa" path="res://assets/Sprites/animation/evil_wizard/Idle.png" id="1_la8sc"]
 [ext_resource type="Texture2D" uid="uid://bhcg8v366xasc" path="res://assets/Sprites/animation/evil_wizard/Death.png" id="1_vujrp"]
+[ext_resource type="Script" uid="uid://hjwf2y36wa6m" path="res://Script/Characters/Ennemies/basic_ennemi/basic_enemy_stats.gd" id="2_jdi8v"]
 [ext_resource type="Texture2D" uid="uid://bxkm6ig3v7mk4" path="res://assets/Sprites/animation/evil_wizard/Attack.png" id="4_cepgy"]
 [ext_resource type="Script" uid="uid://mafskuykreei" path="res://Script/clickeable_area.gd" id="5_owhbi"]
+
+[sub_resource type="Resource" id="Resource_70oq2"]
+script = ExtResource("2_jdi8v")
+current_hp = 50.0
+max_hp = 50.0
+metadata/_custom_type_script = "uid://hjwf2y36wa6m"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kpn57"]
 atlas = ExtResource("1_vujrp")
@@ -339,24 +346,28 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3t4vf"]
-size = Vector2(775.3673, 810.6743)
+size = Vector2(493.03235, 564.3272)
 
 [node name="EvilWizard" type="Node2D" unique_id=263672504]
+scale = Vector2(2, 2)
 script = ExtResource("1_3t4vf")
+stats = SubResource("Resource_70oq2")
 
 [node name="wizard" type="AnimatedSprite2D" parent="." unique_id=1312926631]
-scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_kjijb")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.030542552
+offset = Vector2(0, 20)
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=442673064]
+collision_layer = 8
+collision_mask = 8
 script = ExtResource("5_owhbi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1188435775]
-position = Vector2(-3.000002, 9.536743e-07)
+position = Vector2(0, 20)
 rotation = -3.1415925
 scale = Vector2(0.11865346, -0.14309074)
 shape = SubResource("RectangleShape2D_3t4vf")
