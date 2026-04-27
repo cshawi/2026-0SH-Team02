@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crebs776q1xfb"
-path="res://.godot/imported/hoverSkipButton.png-14614f05b36e896aa96ac21e10e7d16a.ctex"
+uid="uid://c1hyw2uh5wc8v"
+path="res://.godot/imported/skipBtn_hover.png-8b167e8c6c6bbc3c62700f7105ed4cd5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/skipButton/hoverSkipButton.png"
-dest_files=["res://.godot/imported/hoverSkipButton.png-14614f05b36e896aa96ac21e10e7d16a.ctex"]
+source_file="res://assets/Sprites/skipButton/skipBtn_hover.png"
+dest_files=["res://.godot/imported/skipBtn_hover.png-8b167e8c6c6bbc3c62700f7105ed4cd5.ctex"]
 
 [params]
 
