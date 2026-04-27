@@ -6,6 +6,7 @@ signal start_game
 
 #events de player
 signal player_health_changed(current, max)
+signal skip_turn
 
 #events d'ennemi
 signal attack_animation_trigger

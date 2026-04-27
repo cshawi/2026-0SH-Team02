@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://gubuvwxiw6go"]
+
+[ext_resource type="Texture2D" uid="uid://dv7ydcy3carq3" path="res://assets/Sprites/skipButton/skipButton.png" id="1_356j8"]
+[ext_resource type="LabelSettings" uid="uid://bat1x4b06jxpe" path="res://assets/Sprites/Cards/cardLabelSettings/cost.tres" id="2_t4weg"]
+[ext_resource type="Script" uid="uid://b8r2ce8lbtd74" path="res://Script/skipTurnButton.gd" id="2_t5wq1"]
+
+[node name="SkipTurnButton" type="TextureButton" unique_id=360056021]
+anchors_preset = -1
+anchor_right = 0.15
+anchor_bottom = 0.085
+offset_right = -0.1000061
+offset_bottom = -0.08000183
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource("1_356j8")
+stretch_mode = 5
+script = ExtResource("2_t5wq1")
+
+[node name="Label" type="Label" parent="." unique_id=1082354216]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Skip Turn"
+label_settings = ExtResource("2_t4weg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

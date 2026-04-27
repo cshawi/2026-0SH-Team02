@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bmi3okhlq8rsd"]
 
 [ext_resource type="PackedScene" uid="uid://46xld3dbryip" path="res://Scenes/playerHpBar.tscn" id="1_e0onf"]
+[ext_resource type="PackedScene" uid="uid://gubuvwxiw6go" path="res://Scenes/skipTurnButton.tscn" id="2_bjfho"]
+[ext_resource type="Script" uid="uid://b8r2ce8lbtd74" path="res://Script/skipTurnButton.gd" id="3_6fbih"]
 
 [node name="Hud" type="Control" unique_id=704493129]
 layout_mode = 3
@@ -19,3 +21,13 @@ offset_right = 280.0
 offset_bottom = 40.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="SkipTurnButton" parent="." unique_id=360056021 instance=ExtResource("2_bjfho")]
+layout_mode = 1
+offset_left = 981.0
+offset_top = 1.0
+offset_right = 980.9
+offset_bottom = 0.91999817
+grow_horizontal = 0
+grow_vertical = 1
+script = ExtResource("3_6fbih")

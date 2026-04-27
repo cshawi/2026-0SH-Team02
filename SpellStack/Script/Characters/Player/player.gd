@@ -31,7 +31,7 @@ func _ready() -> void:
 	#action_ui.show_actions(actions)
 	cardManager.connect("card_selected", _on_action_selected)
 	cardManager.connect("card_dropped_on_enemy", _on_card_dropped)
-
+	Events.skip_turn.connect(skip_turn)
 	target_manager.target_selected.connect(_on_target_selected)
 	emit_health()
 
@@ -94,4 +94,9 @@ func play_attack():
 func _on_card_dropped(card, enemy):
 	selected_card = card
 	_on_target_selected(enemy)
+	
+	
+func skip_turn():
+	if(turn_state== Turn_state.ACTING):
+		end_turn()
 	
