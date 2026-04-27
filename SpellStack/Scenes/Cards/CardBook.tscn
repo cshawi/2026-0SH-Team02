@@ -24,7 +24,8 @@ script = ExtResource("1_ameya")
 script = ExtResource("6_2hqne")
 
 [node name="Deck" parent="." unique_id=616228429 instance=ExtResource("6_1ntuw")]
-position = Vector2(148, 252)
+position = Vector2(92, 545)
+scale = Vector2(3, 3)
 
 [node name="CardDatabase" type="Node" parent="." unique_id=255516890]
 script = ExtResource("7_2hqne")
