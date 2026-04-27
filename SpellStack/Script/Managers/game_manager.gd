@@ -60,3 +60,7 @@ func load_levels_from_folder(path: String) -> Array:
 			file_name = dir.get_next()
 	
 	return levels
+
+func player_death():
+	SceneManager.player_death()
+	pass

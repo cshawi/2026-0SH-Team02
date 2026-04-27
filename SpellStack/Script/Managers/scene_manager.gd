@@ -7,6 +7,7 @@ extends Node
 @onready var playerUI = $"../../UI/Hud"
 
 @onready var win_ui = $"../../UI/WinUi"
+@onready var game_over = $"../../UI/GameOver"
 @onready var Game_Manager = $"../GameManager"
 
 func _ready() -> void:
@@ -33,6 +34,11 @@ func end_game():
 	for child in LevelHolder.get_children():
 		child.queue_free()
 	win_ui.visible = true
+
+func player_death():
+	for child in LevelHolder.get_children():
+		child.queue_free()
+	game_over.visible = true
 
 func restart_game():
 	get_tree().reload_current_scene()
