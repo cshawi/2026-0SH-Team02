@@ -50,8 +50,11 @@ offset_left = -55.0
 offset_top = 47.0
 offset_right = 57.0
 offset_bottom = 85.0
-text = "ssfdsf"
+theme_override_font_sizes/font_size = 30
+text = "uiuhiuhiuh"
 label_settings = SubResource("LabelSettings_7mr5f")
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Cost" type="Label" parent="Control" unique_id=1314261853]

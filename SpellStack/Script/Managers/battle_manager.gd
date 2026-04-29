@@ -153,6 +153,8 @@ func end_turn(actor):
 
 	if turn_order.is_empty():
 		print("No more characters left. Starting a new round...")
+		print("EMITTING POISON TICK")
+		Events.poison_tick_trigger.emit()
 		start_round()  # Call to start the next round
 	else:
 		print("Proceeding to the next turn...")
@@ -183,6 +185,7 @@ func start_turn():
 	print("Current turn order before action: ", turn_order)
 	if turn_order.is_empty():
 		print("Turn order is empty, starting new round")
+		Events.poison_tick_trigger.emit()
 		start_round()  # Start a new round if no turns are left
 		return
 

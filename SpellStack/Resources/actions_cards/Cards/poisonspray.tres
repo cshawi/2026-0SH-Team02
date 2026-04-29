@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://gnoqlditnqfi"]
+
+[ext_resource type="Script" uid="uid://d0e1la37k4yro" path="res://Script/Actions/effect.gd" id="1_aok5j"]
+[ext_resource type="Script" uid="uid://u3xi8iewjuvo" path="res://Script/Actions/damage.gd" id="2_0kpua"]
+[ext_resource type="Script" uid="uid://13ubg5o3y64n" path="res://Script/Cards/CardData.gd" id="2_02uyu"]
+[ext_resource type="Script" uid="uid://rwgikaucuvpy" path="res://Script/Actions/poison.gd" id="3_0kpua"]
+[ext_resource type="Script" uid="uid://bf4hgb2868r4s" path="res://Script/Actions/action.gd" id="3_81qlc"]
+[ext_resource type="Texture2D" uid="uid://hdclrysgoxal" path="res://assets/Sprites/Cards/AcidSplashCard.png" id="5_v7v5v"]
+
+[sub_resource type="Resource" id="Resource_0xbmc"]
+script = ExtResource("2_0kpua")
+damage = 5
+metadata/_custom_type_script = "uid://u3xi8iewjuvo"
+
+[sub_resource type="Resource" id="Resource_81qlc"]
+script = ExtResource("3_0kpua")
+metadata/_custom_type_script = "uid://rwgikaucuvpy"
+
+[sub_resource type="Resource" id="Resource_jsr27"]
+script = ExtResource("3_81qlc")
+name = "Double Effect"
+effects = Array[ExtResource("1_aok5j")]([SubResource("Resource_0xbmc"), SubResource("Resource_81qlc")])
+
+[resource]
+script = ExtResource("2_02uyu")
+name = "PoisonSpay"
+texture = ExtResource("5_v7v5v")
+action = SubResource("Resource_jsr27")
+cost = 1
+description = "poison"
+metadata/_custom_type_script = "uid://4ut6x8y1bsqe"

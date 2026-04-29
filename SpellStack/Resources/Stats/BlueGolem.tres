@@ -6,4 +6,5 @@
 script = ExtResource("1_71lod")
 current_hp = 40.0
 max_hp = 40.0
+armor = 5
 metadata/_custom_type_script = "uid://hjwf2y36wa6m"

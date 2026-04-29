@@ -12,3 +12,6 @@ signal skip_turn
 signal attack_animation_trigger
 signal death_animation_trigger
 signal death_animation_ended
+
+#event de status
+signal poison_tick_trigger
