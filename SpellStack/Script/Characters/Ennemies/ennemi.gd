@@ -83,3 +83,14 @@ func _on_death():
 func update_hp_bar(damage:int):
 	health -= damage
 	health_bar.update(health, max_health)
+
+func _take_poison_virtual():
+	if(self.stats.current_hp <= 10 && self.stats.current_hp !=1):
+		var remaining_damage = self.stats.current_hp - 1
+		self.stats.take_damage(remaining_damage) 
+		update_hp_bar(remaining_damage)
+	elif(self.stats.current_hp == 1):
+		pass
+	else:
+		self.stats.take_damage(10) 
+		update_hp_bar(10)

@@ -94,4 +94,3 @@ func play_attack():
 func _on_card_dropped(card, enemy):
 	selected_card = card
 	_on_target_selected(enemy)
-	

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Poison" format=3 uid="uid://m2g455lxd1jb"]
+
+[ext_resource type="Script" uid="uid://rwgikaucuvpy" path="res://Script/Actions/poison.gd" id="1_7ddjl"]
+
+[resource]
+script = ExtResource("1_7ddjl")
+metadata/_custom_type_script = "uid://d0e1la37k4yro"

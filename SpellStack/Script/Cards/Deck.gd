@@ -7,7 +7,7 @@ const CARD_DRAW_SPEED = 0.1
 const DECK_SIZE =2
 
 #ici mettre action + modif references 
-var player_starting_deck : Array = ["fireball","waterball","arcana"] 
+var player_starting_deck : Array = ["fireball","waterball","arcana","poisonspray"] 
 var current_deck : Array =[]
 #var player_deck : Array = ["Fireball","AcidSpray","Splash","Zap" ]
 var player_deck : Array = [] #get selon les names dans le database
@@ -18,14 +18,15 @@ var card_database_reference = preload("res://Script/Cards/CardDatabase.gd")
 @onready var deckImage = $DeckImage
 @onready var collision = $Area2D/CollisionShape2D
 
-@onready var cardManager: CardManager =$"../CardManager"
-@onready var playerHand: PlayerHand =$"../PlayerHand"
-@onready var cardDatabase : CardDatabase = $"../CardDatabase"
+@onready var cardManager: CardManager = $"../CardManager"
+@onready var playerHand: PlayerHand = $"../PlayerHand"
+@onready var cardDatabase: CardDatabase = $"../CardDatabase"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player_deck.shuffle()
 	numberOfCardLabel.text = str(player_deck.size())
+	print(get_tree().get_current_scene().get_tree_string())
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func draw_card():

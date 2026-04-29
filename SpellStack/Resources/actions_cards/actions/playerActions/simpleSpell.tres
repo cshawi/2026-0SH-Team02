@@ -6,6 +6,5 @@
 
 [resource]
 script = ExtResource("2_7xu2r")
-name = "simpleSpell"
 effects = Array[ExtResource("1_blmht")]([ExtResource("2_sdwlh")])
 metadata/_custom_type_script = "uid://bf4hgb2868r4s"

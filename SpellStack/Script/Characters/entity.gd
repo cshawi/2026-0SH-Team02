@@ -8,9 +8,19 @@ enum Turn_state { ACTING , WAITING,DEAD,NONE }
 
 var turn_state = Turn_state.WAITING
 
+var is_poisoned : bool = false:
+	set(value):
+		print(self.name, " poison set to ", value)
+		is_poisoned = value
+var poison_stacks : int = 0
+
+func _enter_tree():
+	print(self.name, "Connecting to poison trigger")
+	Events.poison_tick_trigger.connect(poison_tick)
+
 func _ready() -> void:
 	turn_state = Turn_state.WAITING
-			
+
 func _process(_delta: float) -> void:
 	pass
 
@@ -50,3 +60,18 @@ func perform_action(action, enemy) -> void:
 		#print("Action failed, ending turn.")
 	
 	end_turn()  # End turn properly after action
+
+func _take_poison_virtual():
+	pass
+
+func poison_tick():
+	if(!is_poisoned):
+		return
+	
+	print(self.name, " received poison tick")
+	self._take_poison_virtual()
+	
+	poison_stacks -= 1
+	if(poison_stacks <= 0):
+		is_poisoned = false
+	
