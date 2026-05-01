@@ -119,7 +119,7 @@ func pv_verif():
 		
 	if(!character_list.has(player_character)):
 		encounter_state = Encounter.END
-		game_over =true;
+		game_over = true;
 		print("Le player est mort!")
 		#get_tree().paused = true
 		#game_over_ui.visible = true

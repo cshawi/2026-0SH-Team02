@@ -18,4 +18,5 @@ func _attack():
 
 func _on_death():
 	$FlyingEye.play("die")
+	SoundManager.dead_demon()
 	await $FlyingEye.animation_looped

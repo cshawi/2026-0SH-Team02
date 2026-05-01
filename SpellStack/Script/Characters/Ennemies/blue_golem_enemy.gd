@@ -18,4 +18,6 @@ func _attack():
 	
 func _on_death():
 	$Blue_Golem.play("death")
+	SoundManager.dead_golem()
 	await $Blue_Golem.animation_looped
+	
