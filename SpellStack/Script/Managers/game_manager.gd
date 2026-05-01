@@ -62,5 +62,6 @@ func load_levels_from_folder(path: String) -> Array:
 	return levels
 
 func player_death():
+	SoundManager.play_game_over()
 	SceneManager.player_death()
 	pass

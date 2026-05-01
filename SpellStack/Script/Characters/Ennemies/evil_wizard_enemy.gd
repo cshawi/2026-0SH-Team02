@@ -3,7 +3,6 @@ extends Ennemi
 # class parent qui fera juste le tour des actions principales
 #chaque ennemi va heriter de Ennemi
 class_name Evil_wizard
-@onready var SoundController: Node = $"../SoundManager"
 
 func _ready() -> void:
 	stats_path = "res://Resources/Stats/Evil_wizard.tres"

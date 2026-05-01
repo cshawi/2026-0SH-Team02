@@ -35,14 +35,16 @@ volume_db = -3.755
 
 [node name="DeadWitch" type="AudioStreamPlayer" parent="." unique_id=1627818962]
 stream = ExtResource("5_4lw58")
-volume_db = -12.86
+volume_db = -8.0
 pitch_scale = 1.04
 
 [node name="GolemDeath" type="AudioStreamPlayer" parent="." unique_id=624289651]
 stream = ExtResource("6_b3kw1")
+volume_db = -9.587
 
 [node name="FlyingDemonDeath" type="AudioStreamPlayer" parent="." unique_id=452978555]
 stream = ExtResource("7_b3kw1")
+volume_db = -20.0
 
 [node name="DeadShroom" type="AudioStreamPlayer" parent="." unique_id=1712968537]
 stream = ExtResource("8_ii6de")

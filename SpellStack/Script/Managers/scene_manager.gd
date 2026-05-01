@@ -1,6 +1,5 @@
 extends Node
 
-@onready var SoundController: Node = $"../SoundManager"
 @onready var LevelHolder: Node = $"../../LevelHolder"
 @onready var MainMenu: Node = $"../../UI/MainMenu"
 @onready var player : Player = $"../../player"
@@ -18,9 +17,8 @@ func start_game() -> void:
 	MainMenu.diseapear()
 	LevelHolder.visible = true
 	player.visible = true
-	playerAction.visible = true
 	playerUI.visible = true
-	SoundController.play_music()
+	SoundManager.play_music()
 
 func next_level(currentScene):
 	for child in LevelHolder.get_children():
@@ -36,7 +34,7 @@ func end_game():
 	for child in LevelHolder.get_children():
 		child.queue_free()
 	win_ui.visible = true
-	SoundController.play_win_game()
+	SoundManager.play_win_game()
 
 func restart_game():
 	get_tree().reload_current_scene()
@@ -53,3 +51,8 @@ func hide_ui():
 
 func _after_level_loaded():
 	Game_Manager._on_level_ready()
+
+func player_death():
+	for child in LevelHolder.get_children():
+		child.queue_free()
+	game_over.visible = true
