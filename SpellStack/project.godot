@@ -23,6 +23,9 @@ SoundManager="*uid://ce3y8pf07s6am"
 [display]
 
 window/size/viewport_width=1154
+window/size/mode=3
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [input]
 
