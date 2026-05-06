@@ -27,5 +27,5 @@ name = "PoisonSpay"
 texture = ExtResource("5_v7v5v")
 action = SubResource("Resource_jsr27")
 cost = 1
-description = "poison"
+description = "add 5 stack of poison. Last 2 turn "
 metadata/_custom_type_script = "uid://4ut6x8y1bsqe"
