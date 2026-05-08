@@ -39,8 +39,12 @@
 
 # 4. Livrable #4
 
-Les ennemis et le joueur font un bruitage losqu'il font une action
-Les ennemis et le joueur ont des animations d'action
+- Les ennemis et le joueur font un bruitage losqu'il meurt
+- Les ennemis et le joueur ont des animations d'action
+- Le joueur peut tirer une carte de son deck pour la mettre dans sa main
+- Une carte peut être jouer en la glissant sur l'ennemi ou en cliquant sur la carte et l'ennemi pendant le tour du joueur
+- Les ennemis peuvent être affecté par du poison qui reste sur plusieurs tours
+
 
 # 5. Mise en situation (client)
 Lors de notre cours de gestion de projet, nous devons démontrer etre capable de conduire un projet a terme tout en ayant une bonne structure et une bonne capacité de gestion. Dans ce but, nous allon créer un jeux tour par tour mettant en vedette des sorcier. 
