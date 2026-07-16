@@ -52,7 +52,7 @@ func highlight_card(card,hovered):
 		card.z_index = 1
 	
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if card_being_dragged:
 		var mouse_pos = get_global_mouse_position()
 		card_being_dragged.position = Vector2(clamp(mouse_pos.x,0,screen_size.x),clamp(mouse_pos.y,0,screen_size.y))

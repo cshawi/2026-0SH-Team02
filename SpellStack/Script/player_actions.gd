@@ -7,6 +7,7 @@ signal action_selected(action)
 @onready var container = $Layout
 
 func _ready():
+	self.visible = false
 	print(container)
 
 func show_actions(actions):

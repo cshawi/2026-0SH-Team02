@@ -3,6 +3,9 @@ extends Control
 @onready var SceneManager : Node = $"../../Managers/SceneManager"
 @onready var GameManager : Node = $"../../Managers/GameManager"
 
+func _ready():
+	self.visible = true
+
 func _on_play_btn_pressed() -> void:
 	Events.emit_signal("start_game")
 

@@ -26,7 +26,6 @@ var card_database_reference = preload("res://Script/Cards/CardDatabase.gd")
 func _ready() -> void:
 	player_deck.shuffle()
 	numberOfCardLabel.text = str(player_deck.size())
-	print(get_tree().get_current_scene().get_tree_string())
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func draw_card():

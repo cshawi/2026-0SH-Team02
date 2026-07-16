@@ -10,5 +10,5 @@ name = "FireBall"
 texture = ExtResource("3_woo14")
 action = ExtResource("1_sjn1e")
 cost = 1
-description = "blabla"
+description = "deal 8 damage"
 metadata/_custom_type_script = "uid://4ut6x8y1bsqe"

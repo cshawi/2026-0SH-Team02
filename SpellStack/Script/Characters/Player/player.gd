@@ -15,7 +15,7 @@ var selected_card : Card =null
 @onready var playerDeck : Deck = $"../CardBook/Deck"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
+	visible = false
 	add_to_group("player_side")
 	stats = load(stats_path).duplicate(true)
 	if stats == null:

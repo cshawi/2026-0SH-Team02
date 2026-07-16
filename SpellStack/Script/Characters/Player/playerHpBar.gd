@@ -13,12 +13,12 @@ func _init() -> void:
 	pass
 
 
-func _on_health_changed(current, max):
+func _on_health_changed(current, max_hp):
 	
 	if(value > current ):
 		timer.start()
 	
-	max_value = max
+	max_value = max_hp
 	value = current
 	label.text = "%d/%d" % [value,max_value]
 

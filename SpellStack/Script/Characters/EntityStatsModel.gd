@@ -12,5 +12,11 @@ class_name EntityBaseStats
 @export var armor: int = 0
 @export var penetration: int = 0
 
+@export_group("Status Effects")
+@export var poison: bool = false
+@export var poison_stacks: int = 0
+@export var shield_crush: bool = false
+@export var status_effects: Array = []
+
 func take_damage(amount):
 	current_hp -= clamp(amount,0,max_hp)

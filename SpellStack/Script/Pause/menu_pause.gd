@@ -2,6 +2,7 @@ extends Control
 @onready var quit: Button = $QuitButtonContainer/Quit
 @onready var resume: Button = $ResumeButtonContainer/Resume
 @onready var Main_menu = $"../MainMenu"
+@onready var GameManager = $"../../Managers/GameManager"
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS

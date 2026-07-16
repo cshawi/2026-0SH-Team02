@@ -10,5 +10,5 @@ name = "WaterBall"
 texture = ExtResource("2_q4dmn")
 action = ExtResource("1_16fq6")
 cost = 1
-description = "tata"
+description = "deal 8 damage and heal 8 hp"
 metadata/_custom_type_script = "uid://4ut6x8y1bsqe"
