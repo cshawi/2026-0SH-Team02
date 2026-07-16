@@ -10,5 +10,5 @@ name = "arcana"
 texture = ExtResource("5_is03j")
 action = ExtResource("1_b05hn")
 cost = 1
-description = "Heal for 18 damages "
+description = "Heal for 18 hp "
 metadata/_custom_type_script = "uid://13ubg5o3y64n"

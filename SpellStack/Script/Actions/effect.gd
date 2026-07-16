@@ -1,5 +1,5 @@
 extends Resource
 class_name Effect
 
-func apply(user, target):
+func apply(_user, _target):
 	pass

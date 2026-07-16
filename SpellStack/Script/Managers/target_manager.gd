@@ -19,7 +19,6 @@ func start_selection():
 func _on_enemy_clicked(enemy): # reagit pas
 	if selecting == false:
 		return
-		print(enemy)
 	
 	selecting = false
 	target_selected.emit(enemy)

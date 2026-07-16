@@ -36,7 +36,6 @@ func start_turn():
 		choose_action()
 
 func choose_action():
-	print(self, "Trying to choose an action...")
 	if turn_state != Turn_state.ACTING:
 		print("Not in ACTING state, cannot choose action.")
 		return
@@ -69,7 +68,6 @@ func ai_choose_target():
 
 func _on_clicked():
 	if turn_state == Turn_state.WAITING:
-		print("enemy clicked")
 		clicked.emit(self)
 
 func _attack():
